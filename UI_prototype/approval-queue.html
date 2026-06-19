@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudGuard GreenOps — Approval Queue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Simulation Mode Banner -->
+    <div class="bg-amber-600 text-black text-center py-1 text-sm font-semibold sticky top-0 z-50">
+        ⚠️ SIMULATION MODE — All data is simulated. No live cloud connections.
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gray-800 border-b border-gray-700 px-6 py-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center hover:bg-green-400 transition"><span class="text-white font-bold text-sm">CG</span></a>
+                <a href="index.html" class="text-xl font-bold hover:text-green-400 transition">CloudGuard GreenOps</a>
+            </div>
+            <a href="index.html" class="text-sm text-blue-400 hover:text-blue-300">← Back to Heatmap</a>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-8">
+        <div class="flex items-center justify-between mb-6">
+            <div>
+                <h1 class="text-2xl font-bold text-white">Approval Queue</h1>
+                <p class="text-sm text-gray-400 mt-1">Major self-healing actions awaiting your review across all servers</p>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="px-3 py-1.5 bg-red-900/60 border border-red-700 rounded-lg text-sm text-red-300">3 pending</span>
+            </div>
+        </div>
+
+        <!-- Queue Items -->
+        <div class="space-y-4">
+            <!-- Item 1 - Critical -->
+            <div class="bg-gray-800 border-2 border-red-800 rounded-lg overflow-hidden">
+                <div class="bg-red-900/30 px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
+                        <div>
+                            <h3 class="font-semibold text-white">prod-bim-01 — Base Image Update (CVE-2026-1234)</h3>
+                            <p class="text-xs text-gray-400 mt-0.5">Requested 12 min ago by AI Assistant • Escalation in 3 min if unapproved</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-1 bg-red-900 text-red-300 rounded text-xs">Critical</span>
+                        <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">Production</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="bg-gray-900/60 rounded p-3 mb-4 text-sm text-gray-300">
+                        <strong class="text-white">AI Rationale:</strong> CVE-2026-1234 (CVSS 9.8) is actively exploited. BIM processing handles sensitive construction documents. Immediate patching required. Estimated 15s service interruption.
+                    </div>
+                    <div class="text-sm text-gray-400 mb-3">
+                        <strong class="text-gray-300">MCP Tools to execute:</strong> 
+                        <code class="bg-gray-900 px-1 rounded">pull_container_image</code> → 
+                        <code class="bg-gray-900 px-1 rounded">rolling_restart</code> → 
+                        <code class="bg-gray-900 px-1 rounded">vulnerability_scan</code>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="server-selfhealing.html" class="px-4 py-2 bg-red-600 hover:bg-red-500 rounded-lg text-sm font-medium transition">Review & Approve →</a>
+                        <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-medium transition">Deny</button>
+                        <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-medium transition">Snooze 30min</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 - High -->
+            <div class="bg-gray-800 border-2 border-orange-800 rounded-lg overflow-hidden">
+                <div class="bg-orange-900/30 px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></span>
+                        <div>
+                            <h3 class="font-semibold text-white">prod-bim-01 — Preemptive Memory Leak Restart</h3>
+                            <p class="text-xs text-gray-400 mt-0.5">Requested 5 min ago by Predictive AI • OOM predicted in 3.8h</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-1 bg-orange-900 text-orange-300 rounded text-xs">High</span>
+                        <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">Production</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="bg-gray-900/60 rounded p-3 mb-4 text-sm text-gray-300">
+                        <strong class="text-white">AI Rationale:</strong> Memory growing 2.3%/hour, OOM kill predicted in ~3.8h. Graceful restart now = 15s planned downtime. Doing nothing = 5-10 min unplanned outage + potential data loss.
+                    </div>
+                    <div class="text-sm text-gray-400 mb-3">
+                        <strong class="text-gray-300">MCP Tools to execute:</strong>
+                        <code class="bg-gray-900 px-1 rounded">restart_container</code> (graceful=true) →
+                        <code class="bg-gray-900 px-1 rounded">health_check</code>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="server-selfhealing.html" class="px-4 py-2 bg-orange-600 hover:bg-orange-500 rounded-lg text-sm font-medium transition">Review & Approve →</a>
+                        <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-medium transition">Deny</button>
+                        <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-medium transition">Defer (auto-execute if OOM imminent)</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 - Medium -->
+            <div class="bg-gray-800 border-2 border-yellow-800 rounded-lg overflow-hidden">
+                <div class="bg-yellow-900/30 px-6 py-4 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="w-3 h-3 bg-yellow-500 rounded-full"></span>
+                        <div>
+                            <h3 class="font-semibold text-white">prod-storage-01 — Restrict Public Storage Access</h3>
+                            <p class="text-xs text-gray-400 mt-0.5">Requested 45 min ago by Security Engine • No escalation timer</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-1 bg-yellow-900 text-yellow-300 rounded text-xs">Medium</span>
+                        <span class="px-2 py-1 bg-purple-900 text-purple-300 rounded text-xs">Production</span>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <div class="bg-gray-900/60 rounded p-3 mb-4 text-sm text-gray-300">
+                        <strong class="text-white">AI Rationale:</strong> Storage bucket has public read access. Contains construction document uploads. Recommend adding ACL restriction. No active data breach detected, but exposure risk is ongoing.
+                    </div>
+                    <div class="text-sm text-gray-400 mb-3">
+                        <strong class="text-gray-300">MCP Tools to execute:</strong>
+                        <code class="bg-gray-900 px-1 rounded">update_storage_acl</code> →
+                        <code class="bg-gray-900 px-1 rounded">verify_access_policy</code>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="server-selfhealing.html" class="px-4 py-2 bg-yellow-600 hover:bg-yellow-500 text-gray-900 rounded-lg text-sm font-medium transition">Review & Approve →</a>
+                        <button class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-medium transition">Deny</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recently Resolved -->
+        <div class="mt-10">
+            <h2 class="text-lg font-semibold text-gray-300 mb-4">Recently Resolved (Today)</h2>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg divide-y divide-gray-700">
+                <div class="p-4 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                        <div>
+                            <span class="text-sm font-medium">prod-bim-01 — Batch Reschedule</span>
+                            <span class="text-xs text-gray-400 ml-2">Auto-resolved 4h ago</span>
+                        </div>
+                    </div>
+                    <a href="incident-report.html" class="text-xs text-blue-400 hover:text-blue-300">View Report →</a>
+                </div>
+                <div class="p-4 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                        <div>
+                            <span class="text-sm font-medium">prod-bim-01 — Cache Clear</span>
+                            <span class="text-xs text-gray-400 ml-2">Auto-resolved 30min ago</span>
+                        </div>
+                    </div>
+                    <a href="incident-report.html" class="text-xs text-blue-400 hover:text-blue-300">View Report →</a>
+                </div>
+                <div class="p-4 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                        <div>
+                            <span class="text-sm font-medium">stg-report-01 — Stop Idle Staging</span>
+                            <span class="text-xs text-gray-400 ml-2">Auto-resolved 2h ago</span>
+                        </div>
+                    </div>
+                    <a href="incident-report.html" class="text-xs text-blue-400 hover:text-blue-300">View Report →</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

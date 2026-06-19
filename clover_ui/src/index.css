@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply bg-sand-50 text-stone-700 font-sans;
+  }
+  ::selection {
+    @apply bg-clover-200 text-clover-900;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-sand-200 rounded-xl shadow-card;
+  }
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-wider text-stone-400;
+  }
+  .nav-link {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-clover-100/70 transition-colors hover:bg-white/5 hover:text-white;
+  }
+  .nav-link-active {
+    @apply bg-white/10 text-white;
+  }
+}
+
+/* Recharts: keep tooltips on brand */
+.recharts-default-tooltip {
+  border-radius: 10px !important;
+  border: 1px solid #e7e7df !important;
+  box-shadow: 0 8px 24px rgba(16, 40, 24, 0.12) !important;
+}

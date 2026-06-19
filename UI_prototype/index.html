@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudGuard GreenOps — Severity Heatmap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .grid-box { transition: all 0.2s ease; }
+        .grid-box:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .tooltip { visibility: hidden; opacity: 0; transition: opacity 0.2s; }
+        .grid-box:hover .tooltip { visibility: visible; opacity: 1; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Simulation Mode Banner -->
+    <div class="bg-amber-600 text-black text-center py-1 text-sm font-semibold sticky top-0 z-50">
+        ⚠️ SIMULATION MODE — All data is simulated. No live cloud connections.
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gray-800 border-b border-gray-700 px-6 py-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">CG</span>
+                </div>
+                <h1 class="text-xl font-bold">CloudGuard GreenOps</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="approval-queue.html" class="flex items-center gap-2 px-3 py-1.5 bg-yellow-900/60 border border-yellow-700 rounded-lg text-sm text-yellow-300 hover:bg-yellow-900 transition">
+                    <span>⏳</span>
+                    <span>3 Pending Approvals</span>
+                </a>
+                <div class="flex items-center gap-2 text-sm text-gray-400">
+                    <span>Last refresh: 12s ago</span>
+                    <span class="w-2 h-2 bg-green-400 rounded-full inline-block"></span>
+                    <span>Live</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-8">
+        <!-- Aggregate Summary Bar -->
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-white">20</div>
+                <div class="text-xs text-gray-400 mt-1">Total Servers</div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-green-400">72</div>
+                <div class="text-xs text-gray-400 mt-1">Avg Security</div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-green-400">68</div>
+                <div class="text-xs text-gray-400 mt-1">Avg Energy</div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-white">$14,230</div>
+                <div class="text-xs text-gray-400 mt-1">Monthly Cost</div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-red-400">7</div>
+                <div class="text-xs text-gray-400 mt-1">Active Alerts</div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-blue-400">12</div>
+                <div class="text-xs text-gray-400 mt-1">Self-Heal Actions</div>
+            </div>
+            <div class="bg-gray-800 rounded-lg p-4 text-center">
+                <div class="text-2xl font-bold text-red-500">3</div>
+                <div class="text-xs text-gray-400 mt-1">Critical Servers</div>
+            </div>
+        </div>
+
+        <!-- Section Title -->
+        <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-semibold text-gray-200">Server Severity Heatmap</h2>
+            <span class="text-xs text-gray-500">Click a server to view details &amp; AI predictions</span>
+        </div>
+
+        <!-- Heatmap Grid -->
+        <div class="grid grid-cols-4 md:grid-cols-5 gap-3">
+            <a href="server-detail.html" class="grid-box relative bg-red-600 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">prod-bim-01</div>
+                <div class="text-xs opacity-80 mt-1">BIM Processing</div>
+                <div class="text-lg font-bold mt-2">92</div>
+                <div class="tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-gray-900 border border-gray-600 rounded-lg p-3 text-left w-56 z-10">
+                    <div class="font-semibold text-sm">prod-bim-01</div>
+                    <div class="text-xs text-gray-400 mt-1">Priority: <span class="text-red-400 font-bold">92</span> | Status: Critical</div>
+                    <div class="text-xs text-red-400 mt-1">⚠ CVE-2026-1234 detected</div>
+                    <div class="text-xs text-purple-400 mt-1">🔮 92% downtime risk in 4h</div>
+                </div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-red-500 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">prod-api-02</div>
+                <div class="text-xs opacity-80 mt-1">Field Worker App</div>
+                <div class="text-lg font-bold mt-2">85</div>
+                <div class="tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-gray-900 border border-gray-600 rounded-lg p-3 text-left w-56 z-10">
+                    <div class="font-semibold text-sm">prod-api-02</div>
+                    <div class="text-xs text-gray-400 mt-1">Priority: <span class="text-red-400 font-bold">85</span> | Status: Critical</div>
+                    <div class="text-xs text-red-400 mt-1">⚠ CPU > 90% for 8 min</div>
+                    <div class="text-xs text-purple-400 mt-1">🔮 78% crash risk in 2h</div>
+                </div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-red-500 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">prod-db-01</div>
+                <div class="text-xs opacity-80 mt-1">Project Mgmt</div>
+                <div class="text-lg font-bold mt-2">83</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-orange-500 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">prod-iot-01</div>
+                <div class="text-xs opacity-80 mt-1">IoT Monitoring</div>
+                <div class="text-lg font-bold mt-2">72</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-orange-500 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">prod-storage-01</div>
+                <div class="text-xs opacity-80 mt-1">Document Mgmt</div>
+                <div class="text-lg font-bold mt-2">68</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-yellow-500 text-gray-900 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">stg-report-01</div>
+                <div class="text-xs opacity-80 mt-1">Reporting</div>
+                <div class="text-lg font-bold mt-2">55</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-yellow-500 text-gray-900 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">prod-safety-01</div>
+                <div class="text-xs opacity-80 mt-1">Site Safety</div>
+                <div class="text-lg font-bold mt-2">52</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-yellow-600 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">prod-cicd-01</div>
+                <div class="text-xs opacity-80 mt-1">CI/CD Pipeline</div>
+                <div class="text-lg font-bold mt-2">48</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-lime-500 text-gray-900 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">stg-bim-01</div>
+                <div class="text-xs opacity-80 mt-1">BIM Staging</div>
+                <div class="text-lg font-bold mt-2">38</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-lime-600 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">prod-order-01</div>
+                <div class="text-xs opacity-80 mt-1">Customer Platform</div>
+                <div class="text-lg font-bold mt-2">35</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-green-500 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">prod-mobile-01</div>
+                <div class="text-xs opacity-80 mt-1">Field Worker</div>
+                <div class="text-lg font-bold mt-2">22</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-green-500 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">prod-progress-01</div>
+                <div class="text-xs opacity-80 mt-1">Site Progress</div>
+                <div class="text-lg font-bold mt-2">18</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-green-600 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">stg-api-01</div>
+                <div class="text-xs opacity-80 mt-1">API Staging</div>
+                <div class="text-lg font-bold mt-2">15</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-green-600 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">dev-iot-01</div>
+                <div class="text-xs opacity-80 mt-1">IoT Dev</div>
+                <div class="text-lg font-bold mt-2">12</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-green-600 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">stg-safety-01</div>
+                <div class="text-xs opacity-80 mt-1">Safety Staging</div>
+                <div class="text-lg font-bold mt-2">10</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-green-700 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">dev-report-01</div>
+                <div class="text-xs opacity-80 mt-1">Reporting Dev</div>
+                <div class="text-lg font-bold mt-2">8</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-green-700 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">dev-order-01</div>
+                <div class="text-xs opacity-80 mt-1">Order Dev</div>
+                <div class="text-lg font-bold mt-2">6</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-green-700 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">stg-db-01</div>
+                <div class="text-xs opacity-80 mt-1">DB Staging</div>
+                <div class="text-lg font-bold mt-2">5</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-green-700 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">dev-mobile-01</div>
+                <div class="text-xs opacity-80 mt-1">Mobile Dev</div>
+                <div class="text-lg font-bold mt-2">3</div>
+            </a>
+            <a href="server-detail.html" class="grid-box relative bg-green-800 rounded-lg p-4 cursor-pointer text-center">
+                <div class="font-semibold text-sm">dev-storage-01</div>
+                <div class="text-xs opacity-80 mt-1">Storage Dev</div>
+                <div class="text-lg font-bold mt-2">2</div>
+            </a>
+        </div>
+
+        <!-- Legend -->
+        <div class="mt-6 flex items-center gap-4 text-xs text-gray-400">
+            <span>Severity:</span>
+            <div class="flex items-center gap-1"><div class="w-3 h-3 bg-green-600 rounded"></div> Low (0-30)</div>
+            <div class="flex items-center gap-1"><div class="w-3 h-3 bg-yellow-500 rounded"></div> Medium (31-60)</div>
+            <div class="flex items-center gap-1"><div class="w-3 h-3 bg-orange-500 rounded"></div> High (61-80)</div>
+            <div class="flex items-center gap-1"><div class="w-3 h-3 bg-red-500 rounded"></div> Critical (81-100)</div>
+        </div>
+    </main>
+</body>
+</html>

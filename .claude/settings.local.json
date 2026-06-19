@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m pip install --user uv)",
+      "Bash(python -m uv --version)",
+      "Bash(python -m uv python list)",
+      "Bash(python -m uv tool install graphifyy)",
+      "Read(//c/Users/User/.local/bin/**)",
+      "Bash('C:\\\\Users\\\\User/.local/bin/graphify' --version)",
+      "Bash(npm --version)"
+    ]
+  }
+}

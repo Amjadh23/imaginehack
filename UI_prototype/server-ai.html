@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudGuard GreenOps — AI Recommendations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="bg-amber-600 text-black text-center py-1 text-sm font-semibold sticky top-0 z-50">⚠️ SIMULATION MODE</div>
+    <header class="bg-gray-800 border-b border-gray-700 px-6 py-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center hover:bg-green-400 transition"><span class="text-white font-bold text-sm">CG</span></a>
+                <a href="index.html" class="text-xl font-bold hover:text-green-400 transition">CloudGuard GreenOps</a>
+            </div>
+            <a href="index.html" class="text-sm text-blue-400 hover:text-blue-300">← Heatmap</a>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6 py-6">
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 mb-6">
+            <div class="flex items-center gap-4">
+                <label class="text-sm text-gray-400 font-medium">Server:</label>
+                <select class="bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-80">
+                    <option selected>prod-bim-01 — BIM Processing (Production)</option>
+                </select>
+            </div>
+        </div>
+        <div class="border-b border-gray-700 mb-6">
+            <nav class="flex gap-1">
+                <a href="server-detail.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">Overview</a>
+                <a href="server-security.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">Security</a>
+                <a href="server-greenops.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">GreenOps</a>
+                <a href="server-ai.html" class="px-4 py-3 text-sm font-medium text-white border-b-2 border-blue-500 bg-gray-800 rounded-t-lg">AI Recommendations</a>
+                <a href="server-selfhealing.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">Self-Healing</a>
+                <a href="server-mcp.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">MCP Activity</a>
+            </nav>
+        </div>
+
+        <!-- Consolidated Summary -->
+        <div class="bg-gray-800 border border-blue-800 rounded-lg overflow-hidden mb-6">
+            <div class="bg-blue-900/40 px-6 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-2"><span class="text-blue-400">🤖</span><h3 class="font-semibold text-blue-300">Consolidated Incident Summary</h3></div>
+                <span class="text-xs text-gray-400">3 issues • Generated 2 min ago</span>
+            </div>
+            <div class="p-6">
+                <p class="text-sm text-gray-300 leading-relaxed">
+                    <strong>prod-bim-01</strong> faces three simultaneous problems impacting the <strong>BIM/Model Data Processing</strong> workflow:
+                    a critical remote code execution vulnerability, sustained high CPU from memory leak progression, and energy waste from over-provisioning.
+                    The most urgent action is patching CVE-2026-1234 (production, requires approval). Concurrently, the predictive model indicates OOM failure within 4 hours if the memory leak isn't addressed.
+                </p>
+                <div class="mt-4 bg-gray-700/50 rounded-lg p-4">
+                    <h4 class="text-sm font-semibold text-white mb-2">Priority Action Plan:</h4>
+                    <ol class="text-sm text-gray-300 space-y-1 list-decimal list-inside">
+                        <li><strong class="text-red-400">Critical:</strong> Patch CVE-2026-1234 (human approval) → <a href="server-selfhealing.html" class="text-blue-400 hover:text-blue-300">Go to approval</a></li>
+                        <li><strong class="text-orange-400">High:</strong> Preemptive restart for memory leak (human approval) → <a href="server-selfhealing.html" class="text-blue-400 hover:text-blue-300">Go to approval</a></li>
+                        <li><strong class="text-green-400">Done:</strong> Batch rescheduled to off-peak (auto-resolved) → <a href="incident-report.html" class="text-blue-400 hover:text-blue-300">View report</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Individual Recommendations -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-700"><h3 class="font-semibold">All Recommendations</h3></div>
+            <div class="divide-y divide-gray-700">
+                <div class="p-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2 py-0.5 bg-red-900 text-red-300 rounded text-xs">Critical</span>
+                        <span class="px-2 py-0.5 bg-yellow-900 text-yellow-300 rounded text-xs">Requires Approval</span>
+                    </div>
+                    <h4 class="font-medium">Update base image to patch CVE-2026-1234</h4>
+                    <p class="text-sm text-gray-400 mt-1">Production container running vulnerable Node.js image. Rolling restart required.</p>
+                    <a href="server-selfhealing.html" class="inline-block mt-2 text-sm text-blue-400 hover:text-blue-300">Review in Self-Healing →</a>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2 py-0.5 bg-orange-900 text-orange-300 rounded text-xs">High</span>
+                        <span class="px-2 py-0.5 bg-yellow-900 text-yellow-300 rounded text-xs">Requires Approval</span>
+                    </div>
+                    <h4 class="font-medium">Preemptive restart to clear memory leak</h4>
+                    <p class="text-sm text-gray-400 mt-1">AI predicts OOM in 3.8h. Graceful restart now = 15s vs 5-10 min unplanned outage.</p>
+                    <a href="server-selfhealing.html" class="inline-block mt-2 text-sm text-blue-400 hover:text-blue-300">Review in Self-Healing →</a>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2 py-0.5 bg-green-900 text-green-300 rounded text-xs">Low</span>
+                        <span class="px-2 py-0.5 bg-green-900 text-green-300 rounded text-xs">✓ Auto-Resolved</span>
+                    </div>
+                    <h4 class="font-medium">Reschedule batch to off-peak hours</h4>
+                    <p class="text-sm text-gray-400 mt-1">Moved from 10:00 AM to 02:00 AM. Saves $75/mo and 50 kg CO₂.</p>
+                    <a href="incident-report.html" class="inline-block mt-2 text-sm text-blue-400 hover:text-blue-300">View Incident Report →</a>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="px-2 py-0.5 bg-yellow-900 text-yellow-300 rounded text-xs">Medium</span>
+                        <span class="px-2 py-0.5 bg-gray-600 text-gray-300 rounded text-xs">Escalation Needed</span>
+                    </div>
+                    <h4 class="font-medium">Enable auto-scaling</h4>
+                    <p class="text-sm text-gray-400 mt-1">No runbook available. Requires infrastructure team intervention. Proposed: min=1, max=4, target CPU=60%.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

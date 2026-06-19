@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudGuard GreenOps — MCP Activity</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="bg-amber-600 text-black text-center py-1 text-sm font-semibold sticky top-0 z-50">⚠️ SIMULATION MODE</div>
+    <header class="bg-gray-800 border-b border-gray-700 px-6 py-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center hover:bg-green-400 transition"><span class="text-white font-bold text-sm">CG</span></a>
+                <a href="index.html" class="text-xl font-bold hover:text-green-400 transition">CloudGuard GreenOps</a>
+            </div>
+            <a href="index.html" class="text-sm text-blue-400 hover:text-blue-300">← Heatmap</a>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6 py-6">
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 mb-6">
+            <div class="flex items-center gap-4">
+                <label class="text-sm text-gray-400 font-medium">Server:</label>
+                <select class="bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-80">
+                    <option selected>prod-bim-01 — BIM Processing (Production)</option>
+                </select>
+            </div>
+        </div>
+        <div class="border-b border-gray-700 mb-6">
+            <nav class="flex gap-1">
+                <a href="server-detail.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">Overview</a>
+                <a href="server-security.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">Security</a>
+                <a href="server-greenops.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">GreenOps</a>
+                <a href="server-ai.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">AI Recommendations</a>
+                <a href="server-selfhealing.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">Self-Healing</a>
+                <a href="server-mcp.html" class="px-4 py-3 text-sm font-medium text-white border-b-2 border-blue-500 bg-gray-800 rounded-t-lg">MCP Activity</a>
+            </nav>
+        </div>
+
+        <!-- Category Summary -->
+        <div class="grid grid-cols-6 gap-3 mb-6">
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-center"><div class="text-lg font-bold text-blue-400">4</div><div class="text-xs text-gray-400">Monitoring</div></div>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-center"><div class="text-lg font-bold text-green-400">3</div><div class="text-xs text-gray-400">Recovery</div></div>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-center"><div class="text-lg font-bold text-red-400">2</div><div class="text-xs text-gray-400">Security</div></div>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-center"><div class="text-lg font-bold text-yellow-400">1</div><div class="text-xs text-gray-400">GreenOps</div></div>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-center"><div class="text-lg font-bold text-purple-400">2</div><div class="text-xs text-gray-400">Notification</div></div>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-center"><div class="text-lg font-bold text-gray-400">1</div><div class="text-xs text-gray-400">Audit</div></div>
+        </div>
+
+        <!-- Invocation Log -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-700 flex items-center justify-between">
+                <h3 class="font-semibold">Tool Invocation Log</h3>
+                <select class="bg-gray-700 border border-gray-600 rounded px-2 py-1 text-xs text-white">
+                    <option>All Categories</option><option>Monitoring</option><option>Recovery</option><option>Security</option>
+                </select>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-gray-700/50">
+                        <tr>
+                            <th class="text-left px-4 py-3 text-xs text-gray-400 uppercase">Timestamp</th>
+                            <th class="text-left px-4 py-3 text-xs text-gray-400 uppercase">Category</th>
+                            <th class="text-left px-4 py-3 text-xs text-gray-400 uppercase">Tool</th>
+                            <th class="text-left px-4 py-3 text-xs text-gray-400 uppercase">Parameters</th>
+                            <th class="text-left px-4 py-3 text-xs text-gray-400 uppercase">Result</th>
+                            <th class="text-left px-4 py-3 text-xs text-gray-400 uppercase">Policy</th>
+                            <th class="text-left px-4 py-3 text-xs text-gray-400 uppercase">Report</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-700">
+                        <tr class="hover:bg-gray-700/30">
+                            <td class="px-4 py-3 text-xs text-gray-400">14:05:22Z</td>
+                            <td class="px-4 py-3"><span class="px-2 py-0.5 bg-green-900 text-green-300 rounded text-xs">Recovery</span></td>
+                            <td class="px-4 py-3 font-mono text-blue-300">clear_cache</td>
+                            <td class="px-4 py-3 text-xs text-gray-400 font-mono">{"pool": "redis_main"}</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Success</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Compliant</td>
+                            <td class="px-4 py-3"><a href="incident-report.html" class="text-blue-400 text-xs">View</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-700/30">
+                            <td class="px-4 py-3 text-xs text-gray-400">10:05:12Z</td>
+                            <td class="px-4 py-3"><span class="px-2 py-0.5 bg-green-900 text-green-300 rounded text-xs">Recovery</span></td>
+                            <td class="px-4 py-3 font-mono text-blue-300">reschedule_batch</td>
+                            <td class="px-4 py-3 text-xs text-gray-400 font-mono">{"new_time": "02:00"}</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Success</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Compliant</td>
+                            <td class="px-4 py-3"><a href="incident-report.html" class="text-blue-400 text-xs">View</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-700/30">
+                            <td class="px-4 py-3 text-xs text-gray-400">10:05:13Z</td>
+                            <td class="px-4 py-3"><span class="px-2 py-0.5 bg-blue-900 text-blue-300 rounded text-xs">Monitoring</span></td>
+                            <td class="px-4 py-3 font-mono text-blue-300">health_check</td>
+                            <td class="px-4 py-3 text-xs text-gray-400 font-mono">{"type": "post_action"}</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Healthy</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Compliant</td>
+                            <td class="px-4 py-3"><a href="incident-report.html" class="text-blue-400 text-xs">View</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-700/30">
+                            <td class="px-4 py-3 text-xs text-gray-400">06:22:01Z</td>
+                            <td class="px-4 py-3"><span class="px-2 py-0.5 bg-green-900 text-green-300 rounded text-xs">Recovery</span></td>
+                            <td class="px-4 py-3 font-mono text-blue-300">restart_container</td>
+                            <td class="px-4 py-3 text-xs text-gray-400 font-mono">{"graceful": true}</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Success</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Compliant</td>
+                            <td class="px-4 py-3"><a href="incident-report.html" class="text-blue-400 text-xs">View</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-700/30">
+                            <td class="px-4 py-3 text-xs text-gray-400">06:22:10Z</td>
+                            <td class="px-4 py-3"><span class="px-2 py-0.5 bg-blue-900 text-blue-300 rounded text-xs">Monitoring</span></td>
+                            <td class="px-4 py-3 font-mono text-blue-300">health_check</td>
+                            <td class="px-4 py-3 text-xs text-gray-400 font-mono">{"type": "post_action"}</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Healthy</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Compliant</td>
+                            <td class="px-4 py-3"><a href="incident-report.html" class="text-blue-400 text-xs">View</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-700/30">
+                            <td class="px-4 py-3 text-xs text-gray-400">Yesterday 22:14Z</td>
+                            <td class="px-4 py-3"><span class="px-2 py-0.5 bg-green-900 text-green-300 rounded text-xs">Recovery</span></td>
+                            <td class="px-4 py-3 font-mono text-blue-300">restart_container</td>
+                            <td class="px-4 py-3 text-xs text-gray-400 font-mono">{"graceful": true}</td>
+                            <td class="px-4 py-3 text-red-400 text-xs">✗ Failed</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Compliant</td>
+                            <td class="px-4 py-3"><a href="incident-report.html" class="text-blue-400 text-xs">View</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-700/30">
+                            <td class="px-4 py-3 text-xs text-gray-400">Yesterday 22:14Z</td>
+                            <td class="px-4 py-3"><span class="px-2 py-0.5 bg-purple-900 text-purple-300 rounded text-xs">Notification</span></td>
+                            <td class="px-4 py-3 font-mono text-blue-300">escalate_to_operator</td>
+                            <td class="px-4 py-3 text-xs text-gray-400 font-mono">{"reason": "restart_failed"}</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Sent</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Compliant</td>
+                            <td class="px-4 py-3"><a href="incident-report.html" class="text-blue-400 text-xs">View</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-700/30">
+                            <td class="px-4 py-3 text-xs text-gray-400">Yesterday 08:00Z</td>
+                            <td class="px-4 py-3"><span class="px-2 py-0.5 bg-red-900 text-red-300 rounded text-xs">Security</span></td>
+                            <td class="px-4 py-3 font-mono text-blue-300">vulnerability_scan</td>
+                            <td class="px-4 py-3 text-xs text-gray-400 font-mono">{"scanner": "trivy"}</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Complete</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Compliant</td>
+                            <td class="px-4 py-3 text-xs text-gray-500">—</td>
+                        </tr>
+                        <tr class="hover:bg-gray-700/30">
+                            <td class="px-4 py-3 text-xs text-gray-400">Jun 18 02:00Z</td>
+                            <td class="px-4 py-3"><span class="px-2 py-0.5 bg-yellow-900 text-yellow-300 rounded text-xs">GreenOps</span></td>
+                            <td class="px-4 py-3 font-mono text-blue-300">energy_analysis</td>
+                            <td class="px-4 py-3 text-xs text-gray-400 font-mono">{"window": "7d"}</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Complete</td>
+                            <td class="px-4 py-3 text-green-400 text-xs">✓ Compliant</td>
+                            <td class="px-4 py-3 text-xs text-gray-500">—</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="px-6 py-3 border-t border-gray-700 text-xs text-gray-400">Showing 9 invocations • Retained for 90 days</div>
+        </div>
+    </main>
+</body>
+</html>

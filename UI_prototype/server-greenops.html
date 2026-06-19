@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudGuard GreenOps — Energy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <div class="bg-amber-600 text-black text-center py-1 text-sm font-semibold sticky top-0 z-50">⚠️ SIMULATION MODE</div>
+    <header class="bg-gray-800 border-b border-gray-700 px-6 py-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center hover:bg-green-400 transition"><span class="text-white font-bold text-sm">CG</span></a>
+                <a href="index.html" class="text-xl font-bold hover:text-green-400 transition">CloudGuard GreenOps</a>
+            </div>
+            <a href="index.html" class="text-sm text-blue-400 hover:text-blue-300">← Heatmap</a>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6 py-6">
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 mb-6">
+            <div class="flex items-center gap-4">
+                <label class="text-sm text-gray-400 font-medium">Server:</label>
+                <select class="bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 w-80">
+                    <option selected>prod-bim-01 — BIM Processing (Production)</option>
+                </select>
+                <div class="ml-auto"><span class="px-2 py-1 bg-orange-900 text-orange-300 rounded text-xs">Energy: 42 | Energy-Critical</span></div>
+            </div>
+        </div>
+        <div class="border-b border-gray-700 mb-6">
+            <nav class="flex gap-1">
+                <a href="server-detail.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">Overview</a>
+                <a href="server-security.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">Security</a>
+                <a href="server-greenops.html" class="px-4 py-3 text-sm font-medium text-white border-b-2 border-blue-500 bg-gray-800 rounded-t-lg">GreenOps</a>
+                <a href="server-ai.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">AI Recommendations</a>
+                <a href="server-selfhealing.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">Self-Healing</a>
+                <a href="server-mcp.html" class="px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-gray-800 rounded-t-lg transition">MCP Activity</a>
+            </nav>
+        </div>
+
+        <div class="grid grid-cols-4 gap-4 mb-6">
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 text-center"><div class="text-3xl font-bold text-orange-400">42</div><div class="text-xs text-gray-400 mt-1">Energy Score</div></div>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 text-center"><div class="text-3xl font-bold text-red-400">187</div><div class="text-xs text-gray-400 mt-1">kg CO₂/month</div></div>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 text-center"><div class="text-3xl font-bold text-orange-400">$342</div><div class="text-xs text-gray-400 mt-1">Cost Waste/month</div></div>
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 text-center"><div class="text-3xl font-bold text-yellow-400">156</div><div class="text-xs text-gray-400 mt-1">Waste Hours</div></div>
+        </div>
+
+        <!-- Score Breakdown -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+            <h3 class="text-sm font-semibold text-gray-400 uppercase mb-4">Energy Score Degradation</h3>
+            <p class="text-xs text-gray-500 mb-4">Each detected inefficiency reduces the score. The line shows cumulative impact.</p>
+
+            <!-- SVG Line Chart -->
+            <div class="relative">
+                <svg viewBox="0 0 500 220" class="w-full" style="height: 360px;" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Grid lines -->
+                    <line x1="60" y1="20" x2="60" y2="180" stroke="#374151" stroke-width="1"/>
+                    <line x1="60" y1="20" x2="480" y2="20" stroke="#374151" stroke-width="0.5" stroke-dasharray="4"/>
+                    <line x1="60" y1="60" x2="480" y2="60" stroke="#374151" stroke-width="0.5" stroke-dasharray="4"/>
+                    <line x1="60" y1="100" x2="480" y2="100" stroke="#374151" stroke-width="0.5" stroke-dasharray="4"/>
+                    <line x1="60" y1="140" x2="480" y2="140" stroke="#374151" stroke-width="0.5" stroke-dasharray="4"/>
+                    <line x1="60" y1="180" x2="480" y2="180" stroke="#374151" stroke-width="1"/>
+
+                    <!-- Y-axis labels -->
+                    <text x="50" y="24" text-anchor="end" fill="#9CA3AF" font-size="11">100</text>
+                    <text x="50" y="64" text-anchor="end" fill="#9CA3AF" font-size="11">75</text>
+                    <text x="50" y="104" text-anchor="end" fill="#9CA3AF" font-size="11">50</text>
+                    <text x="50" y="144" text-anchor="end" fill="#9CA3AF" font-size="11">25</text>
+                    <text x="50" y="184" text-anchor="end" fill="#9CA3AF" font-size="11">0</text>
+
+                    <!-- Danger zone (below 50) -->
+                    <rect x="60" y="100" width="420" height="80" fill="#7F1D1D" opacity="0.15"/>
+                    <text x="470" y="115" text-anchor="end" fill="#F87171" font-size="9" opacity="0.7">Energy-Critical Zone</text>
+
+                    <!-- Line chart path: 100 → 80 → 65 → 50 → 42 -->
+                    <!-- Y mapping: score 100=y20, 0=y180. So y = 180 - (score/100)*160 -->
+                    <!-- Points: (80,20) (185,52) (290,76) (395,100) (470,107.2) -->
+
+                    <!-- Gradient fill under line -->
+                    <defs>
+                        <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#22C55E"/>
+                            <stop offset="30%" stop-color="#EAB308"/>
+                            <stop offset="70%" stop-color="#F97316"/>
+                            <stop offset="100%" stop-color="#EF4444"/>
+                        </linearGradient>
+                        <linearGradient id="fillGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#F97316" stop-opacity="0.3"/>
+                            <stop offset="100%" stop-color="#F97316" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Area fill -->
+                    <path d="M80,20 L185,52 L290,76 L395,100 L470,107.2 L470,180 L80,180 Z" fill="url(#fillGrad)"/>
+
+                    <!-- Main line -->
+                    <polyline points="80,20 185,52 290,76 395,100 470,107.2" fill="none" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+                    <!-- Data points -->
+                    <circle cx="80" cy="20" r="5" fill="#22C55E" stroke="#1F2937" stroke-width="2"/>
+                    <circle cx="185" cy="52" r="5" fill="#EAB308" stroke="#1F2937" stroke-width="2"/>
+                    <circle cx="290" cy="76" r="5" fill="#F97316" stroke="#1F2937" stroke-width="2"/>
+                    <circle cx="395" cy="100" r="5" fill="#F97316" stroke="#1F2937" stroke-width="2"/>
+                    <circle cx="470" cy="107.2" r="6" fill="#EF4444" stroke="#1F2937" stroke-width="2"/>
+
+                    <!-- Point labels (score values) -->
+                    <text x="80" y="14" text-anchor="middle" fill="#22C55E" font-size="11" font-weight="bold">100</text>
+                    <text x="185" y="46" text-anchor="middle" fill="#EAB308" font-size="11" font-weight="bold">80</text>
+                    <text x="290" y="70" text-anchor="middle" fill="#F97316" font-size="11" font-weight="bold">65</text>
+                    <text x="395" y="94" text-anchor="middle" fill="#F97316" font-size="11" font-weight="bold">50</text>
+                    <text x="470" y="122" text-anchor="middle" fill="#EF4444" font-size="12" font-weight="bold">42</text>
+
+                    <!-- X-axis labels (penalty causes) -->
+                    <text x="80" y="198" text-anchor="middle" fill="#9CA3AF" font-size="9">Base</text>
+                    <text x="185" y="198" text-anchor="middle" fill="#9CA3AF" font-size="9">Over-</text>
+                    <text x="185" y="208" text-anchor="middle" fill="#9CA3AF" font-size="9">provisioned</text>
+                    <text x="290" y="198" text-anchor="middle" fill="#9CA3AF" font-size="9">No Auto-</text>
+                    <text x="290" y="208" text-anchor="middle" fill="#9CA3AF" font-size="9">scaling</text>
+                    <text x="395" y="198" text-anchor="middle" fill="#9CA3AF" font-size="9">Batch in</text>
+                    <text x="395" y="208" text-anchor="middle" fill="#9CA3AF" font-size="9">Peak Hours</text>
+                    <text x="470" y="198" text-anchor="middle" fill="#9CA3AF" font-size="9">Low CPU</text>
+                    <text x="470" y="208" text-anchor="middle" fill="#9CA3AF" font-size="9">Utilization</text>
+
+                    <!-- Drop annotations -->
+                    <text x="133" y="42" text-anchor="middle" fill="#EF4444" font-size="9">-20</text>
+                    <text x="238" y="70" text-anchor="middle" fill="#EF4444" font-size="9">-15</text>
+                    <text x="343" y="94" text-anchor="middle" fill="#EF4444" font-size="9">-15</text>
+                    <text x="433" y="110" text-anchor="middle" fill="#EF4444" font-size="9">-8</text>
+                </svg>
+            </div>
+
+            <!-- Legend -->
+            <div class="flex items-center justify-between mt-2 text-xs text-gray-500">
+                <span>Each point = score after that penalty is applied</span>
+                <div class="flex items-center gap-3">
+                    <span class="flex items-center gap-1"><span class="w-2 h-2 bg-green-500 rounded-full"></span> Healthy (75+)</span>
+                    <span class="flex items-center gap-1"><span class="w-2 h-2 bg-yellow-500 rounded-full"></span> Warning (50-74)</span>
+                    <span class="flex items-center gap-1"><span class="w-2 h-2 bg-red-500 rounded-full"></span> Critical (&lt;50)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Findings -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-700"><h3 class="font-semibold">Inefficiency Patterns (4)</h3></div>
+            <div class="divide-y divide-gray-700">
+                <div class="p-5">
+                    <div class="flex justify-between"><h4 class="font-medium">Over-Provisioned Workload</h4><span class="text-orange-400 text-sm">-20 pts</span></div>
+                    <p class="text-sm text-gray-400 mt-1">Avg CPU 18% over 7 days. Capacity significantly exceeds usage.</p>
+                    <div class="mt-2 bg-green-900/20 border border-green-900 rounded p-2 text-sm text-green-400">💡 Scale down. Est. savings: $128/mo, 62 kg CO₂</div>
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between"><h4 class="font-medium">No Auto-Scaling</h4><span class="text-yellow-400 text-sm">-15 pts</span></div>
+                    <p class="text-sm text-gray-400 mt-1">Fixed capacity regardless of demand. Wasting energy during low-usage periods.</p>
+                    <div class="mt-2 bg-green-900/20 border border-green-900 rounded p-2 text-sm text-green-400">💡 Enable auto-scaling. min=1, max=4, target=60% CPU</div>
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between"><h4 class="font-medium">Batch in Peak Hours</h4><span class="text-yellow-400 text-sm">-15 pts</span></div>
+                    <p class="text-sm text-gray-400 mt-1">BIM batch at 10 AM competes with interactive workloads.</p>
+                    <div class="mt-2 bg-green-900/20 border border-green-900 rounded p-2 text-sm text-green-400">💡 Reschedule to 02:00 AM. <span class="text-green-300">(✓ Auto-resolved)</span></div>
+                </div>
+                <div class="p-5">
+                    <div class="flex justify-between"><h4 class="font-medium">Low CPU with High Runtime</h4><span class="text-yellow-400 text-sm">-8 pts</span></div>
+                    <p class="text-sm text-gray-400 mt-1">18% avg CPU, 744h/month runtime. Running 24/7 mostly idle.</p>
+                    <div class="mt-2 bg-green-900/20 border border-green-900 rounded p-2 text-sm text-green-400">💡 Consider serverless/on-demand model</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudGuard GreenOps — Post-Incident Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Simulation Mode Banner -->
+    <div class="bg-amber-600 text-black text-center py-1 text-sm font-semibold sticky top-0 z-50">
+        ⚠️ SIMULATION MODE — All data is simulated. No live cloud connections.
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gray-800 border-b border-gray-700 px-6 py-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <a href="index.html" class="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center hover:bg-green-400 transition"><span class="text-white font-bold text-sm">CG</span></a>
+                <a href="index.html" class="text-xl font-bold hover:text-green-400 transition">CloudGuard GreenOps</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="server-selfhealing.html" class="text-sm text-blue-400 hover:text-blue-300">← Back to Self-Healing</a>
+                <a href="server-detail.html" class="text-sm text-gray-400 hover:text-gray-300">Server Detail</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-8">
+        <!-- Report Header -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <div class="flex items-center gap-3">
+                        <span class="px-3 py-1 bg-green-900 text-green-300 rounded-lg text-sm font-medium">✓ Resolved</span>
+                        <h1 class="text-xl font-bold text-white">Post-Incident Action Report</h1>
+                    </div>
+                    <p class="text-sm text-gray-400 mt-2">Incident #INC-2026-0620-003 • Batch Job Rescheduling</p>
+                </div>
+                <div class="text-right text-sm text-gray-400">
+                    <div>Server: <span class="text-white font-medium">prod-bim-01</span></div>
+                    <div>Date: <span class="text-white">2026-06-20 10:05:12 UTC</span></div>
+                    <div>Duration: <span class="text-green-400">0.8 seconds</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What Happened -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+            <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <span>📋</span> What Happened
+            </h2>
+            <div class="bg-gray-900/60 rounded-lg p-4 text-sm text-gray-300 leading-relaxed">
+                <p>The AI model detected that prod-bim-01's BIM model processing batch job was scheduled at 10:00 AM, competing with interactive user requests during peak business hours (09:00–17:00). This caused intermittent CPU spikes and slower response times for site engineers using the BIM viewer.</p>
+                <p class="mt-3">The system automatically rescheduled the batch to 02:00 AM off-peak window. This is classified as a <strong class="text-green-400">low-risk, automated action</strong> because it does not terminate workloads, does not modify persistent data, and is fully reversible.</p>
+            </div>
+        </div>
+
+        <!-- AI Decision Process -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+            <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <span>🤖</span> AI Decision Process
+            </h2>
+            <div class="space-y-4">
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 bg-blue-900 rounded-full flex items-center justify-center text-sm font-bold text-blue-300">1</div>
+                    <div>
+                        <h4 class="font-medium text-white">Detection</h4>
+                        <p class="text-sm text-gray-400">GreenOps Engine flagged "batch in peak hours" pattern. Energy Score deducted 15 points. Batch scheduled at 10:00 AM falls within configured peak window (09:00–17:00).</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 bg-blue-900 rounded-full flex items-center justify-center text-sm font-bold text-blue-300">2</div>
+                    <div>
+                        <h4 class="font-medium text-white">AI Diagnosis</h4>
+                        <p class="text-sm text-gray-400">AI determined root cause: cron schedule conflict. Business impact: BIM model uploads delayed by 2-5s during batch run. Recommended action: reschedule to off-peak (02:00 AM) with zero impact to next-day availability.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 bg-blue-900 rounded-full flex items-center justify-center text-sm font-bold text-blue-300">3</div>
+                    <div>
+                        <h4 class="font-medium text-white">Policy Check</h4>
+                        <p class="text-sm text-gray-400">Action classified as <strong class="text-green-400">low-risk</strong>: does not terminate workloads ✓, does not modify persistent data ✓, is reversible ✓. Auto-execution approved per policy (non-destructive action on any environment).</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0 w-8 h-8 bg-green-900 rounded-full flex items-center justify-center text-sm font-bold text-green-300">4</div>
+                    <div>
+                        <h4 class="font-medium text-white">Execution & Verification</h4>
+                        <p class="text-sm text-gray-400">Runbook executed in 0.8s. Verification confirmed: cron schedule updated, next batch run confirmed at 02:00 AM. No service interruption occurred.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MCP Tools Used -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+            <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <span>🔧</span> MCP Tools Executed
+            </h2>
+            <div class="space-y-3">
+                <!-- Tool 1 -->
+                <div class="bg-gray-900 border border-gray-700 rounded-lg p-4">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-0.5 bg-green-900 text-green-300 rounded text-xs font-medium">Recovery</span>
+                            <code class="text-sm font-mono text-blue-300">reschedule_batch</code>
+                        </div>
+                        <span class="text-xs text-green-400">✓ Success (0.6s)</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <span class="text-xs text-gray-500 uppercase">Input Parameters</span>
+                            <pre class="bg-gray-800 rounded p-2 mt-1 text-xs text-gray-300 overflow-x-auto">{
+  "target": "prod-bim-01",
+  "job_id": "bim-model-processing-daily",
+  "current_schedule": "0 10 * * *",
+  "new_schedule": "0 2 * * *",
+  "timezone": "UTC"
+}</pre>
+                        </div>
+                        <div>
+                            <span class="text-xs text-gray-500 uppercase">Output Result</span>
+                            <pre class="bg-gray-800 rounded p-2 mt-1 text-xs text-gray-300 overflow-x-auto">{
+  "status": "success",
+  "previous_schedule": "0 10 * * *",
+  "new_schedule": "0 2 * * *",
+  "next_run": "2026-06-21T02:00:00Z",
+  "rollback_available": true
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tool 2 -->
+                <div class="bg-gray-900 border border-gray-700 rounded-lg p-4">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-0.5 bg-blue-900 text-blue-300 rounded text-xs font-medium">Monitoring</span>
+                            <code class="text-sm font-mono text-blue-300">health_check</code>
+                        </div>
+                        <span class="text-xs text-green-400">✓ Success (0.2s)</span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <span class="text-xs text-gray-500 uppercase">Input Parameters</span>
+                            <pre class="bg-gray-800 rounded p-2 mt-1 text-xs text-gray-300 overflow-x-auto">{
+  "target": "prod-bim-01",
+  "check_type": "post_action_verification",
+  "timeout_seconds": 30
+}</pre>
+                        </div>
+                        <div>
+                            <span class="text-xs text-gray-500 uppercase">Output Result</span>
+                            <pre class="bg-gray-800 rounded p-2 mt-1 text-xs text-gray-300 overflow-x-auto">{
+  "status": "healthy",
+  "response_time_ms": 45,
+  "cpu_usage": 67,
+  "memory_usage": 72,
+  "all_checks_passed": true
+}</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Before / After Comparison -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+            <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <span>📊</span> Before / After
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-red-900/20 border border-red-900 rounded-lg p-4">
+                    <h4 class="text-sm font-semibold text-red-300 mb-3">Before Action</h4>
+                    <dl class="space-y-2 text-sm">
+                        <div class="flex justify-between"><dt class="text-gray-400">Batch Schedule</dt><dd class="text-red-300">10:00 AM (peak hours)</dd></div>
+                        <div class="flex justify-between"><dt class="text-gray-400">Peak CPU Impact</dt><dd class="text-red-300">+35% during batch</dd></div>
+                        <div class="flex justify-between"><dt class="text-gray-400">User Latency</dt><dd class="text-red-300">+2-5s during batch</dd></div>
+                        <div class="flex justify-between"><dt class="text-gray-400">Energy Score</dt><dd class="text-red-300">42/100</dd></div>
+                        <div class="flex justify-between"><dt class="text-gray-400">Monthly Cost Waste</dt><dd class="text-red-300">$75</dd></div>
+                    </dl>
+                </div>
+                <div class="bg-green-900/20 border border-green-900 rounded-lg p-4">
+                    <h4 class="text-sm font-semibold text-green-300 mb-3">After Action</h4>
+                    <dl class="space-y-2 text-sm">
+                        <div class="flex justify-between"><dt class="text-gray-400">Batch Schedule</dt><dd class="text-green-300">02:00 AM (off-peak)</dd></div>
+                        <div class="flex justify-between"><dt class="text-gray-400">Peak CPU Impact</dt><dd class="text-green-300">0% (no contention)</dd></div>
+                        <div class="flex justify-between"><dt class="text-gray-400">User Latency</dt><dd class="text-green-300">Normal (< 200ms)</dd></div>
+                        <div class="flex justify-between"><dt class="text-gray-400">Energy Score</dt><dd class="text-green-300">57/100 (+15)</dd></div>
+                        <div class="flex justify-between"><dt class="text-gray-400">Monthly Cost Saved</dt><dd class="text-green-300">$75</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <!-- Execution Timeline -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 mb-6">
+            <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <span>⏱️</span> Execution Timeline
+            </h2>
+            <div class="relative pl-8 space-y-4">
+                <div class="absolute left-3 top-2 bottom-2 w-0.5 bg-gray-700"></div>
+                
+                <div class="relative">
+                    <div class="absolute -left-5 w-3 h-3 bg-blue-500 rounded-full"></div>
+                    <div class="text-sm"><span class="text-gray-500">10:05:12.000</span> <span class="text-blue-300 ml-2">Issue detected</span> — GreenOps Engine flagged batch-in-peak-hours</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-5 w-3 h-3 bg-purple-500 rounded-full"></div>
+                    <div class="text-sm"><span class="text-gray-500">10:05:12.120</span> <span class="text-purple-300 ml-2">AI diagnosis</span> — Root cause: cron schedule conflict</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-5 w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div class="text-sm"><span class="text-gray-500">10:05:12.250</span> <span class="text-yellow-300 ml-2">Policy check</span> — Low-risk: auto-execution approved</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-5 w-3 h-3 bg-orange-500 rounded-full"></div>
+                    <div class="text-sm"><span class="text-gray-500">10:05:12.300</span> <span class="text-orange-300 ml-2">MCP: reschedule_batch</span> — Executing...</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-5 w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div class="text-sm"><span class="text-gray-500">10:05:12.900</span> <span class="text-green-300 ml-2">MCP: reschedule_batch</span> — Success (0.6s)</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-5 w-3 h-3 bg-green-500 rounded-full"></div>
+                    <div class="text-sm"><span class="text-gray-500">10:05:12.950</span> <span class="text-green-300 ml-2">MCP: health_check</span> — Healthy (0.2s)</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-5 w-3 h-3 bg-green-400 rounded-full ring-2 ring-green-400/30"></div>
+                    <div class="text-sm"><span class="text-gray-500">10:05:13.150</span> <span class="text-green-400 ml-2 font-medium">Incident resolved</span> — Total duration: 0.8s</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Audit & Compliance -->
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-6">
+            <h2 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+                <span>🔒</span> Audit & Compliance
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div class="space-y-2">
+                    <div class="flex justify-between"><span class="text-gray-400">Incident ID</span><span>INC-2026-0620-003</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">Triggered by</span><span>GreenOps Engine (automated)</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">Approval type</span><span class="text-green-400">Auto-approved (low-risk policy)</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">Operator notified</span><span>Yes (post-action notification)</span></div>
+                </div>
+                <div class="space-y-2">
+                    <div class="flex justify-between"><span class="text-gray-400">Policy compliance</span><span class="text-green-400">✓ Fully compliant</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">Rollback available</span><span class="text-green-400">Yes (revert to 10:00 AM schedule)</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">Log retention</span><span>90 days (expires 2026-09-18)</span></div>
+                    <div class="flex justify-between"><span class="text-gray-400">Data modified</span><span>None (schedule metadata only)</span></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

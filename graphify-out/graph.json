@@ -1,0 +1,3190 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "00_INDEX.md",
+      "file_type": "document",
+      "source_file": "specs/00_INDEX.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_00_index",
+      "community": 15,
+      "norm_label": "00_index.md"
+    },
+    {
+      "label": "Reconciled SDD \u2014 CloudGuard GreenOps / HILTI Cloud Intelligence",
+      "file_type": "document",
+      "source_file": "specs/00_INDEX.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_00_index_reconciled_sdd_cloudguard_greenops_hilti_cloud_intelligence",
+      "community": 15,
+      "norm_label": "reconciled sdd \u2014 cloudguard greenops / hilti cloud intelligence"
+    },
+    {
+      "label": "Locked reconciliation decisions (2026-06-20)",
+      "file_type": "document",
+      "source_file": "specs/00_INDEX.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "specs_00_index_locked_reconciliation_decisions_2026_06_20",
+      "community": 15,
+      "norm_label": "locked reconciliation decisions (2026-06-20)"
+    },
+    {
+      "label": "Reading order",
+      "file_type": "document",
+      "source_file": "specs/00_INDEX.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "specs_00_index_reading_order",
+      "community": 15,
+      "norm_label": "reading order"
+    },
+    {
+      "label": "Engineering principle",
+      "file_type": "document",
+      "source_file": "specs/00_INDEX.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "specs_00_index_engineering_principle",
+      "community": 15,
+      "norm_label": "engineering principle"
+    },
+    {
+      "label": "01_PROJECT_CONTEXT.md",
+      "file_type": "document",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_01_project_context",
+      "community": 9,
+      "norm_label": "01_project_context.md"
+    },
+    {
+      "label": "01 \u2014 Project Context",
+      "file_type": "document",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_01_project_context_01_project_context",
+      "community": 9,
+      "norm_label": "01 \u2014 project context"
+    },
+    {
+      "label": "Hackathon",
+      "file_type": "document",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "specs_01_project_context_hackathon",
+      "community": 9,
+      "norm_label": "hackathon"
+    },
+    {
+      "label": "Problem",
+      "file_type": "document",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "specs_01_project_context_problem",
+      "community": 9,
+      "norm_label": "problem"
+    },
+    {
+      "label": "Solution",
+      "file_type": "document",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "specs_01_project_context_solution",
+      "community": 9,
+      "norm_label": "solution"
+    },
+    {
+      "label": "Product name",
+      "file_type": "document",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "specs_01_project_context_product_name",
+      "community": 9,
+      "norm_label": "product name"
+    },
+    {
+      "label": "Track relevance",
+      "file_type": "document",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "specs_01_project_context_track_relevance",
+      "community": 9,
+      "norm_label": "track relevance"
+    },
+    {
+      "label": "Winning angle",
+      "file_type": "document",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L46",
+      "_origin": "ast",
+      "id": "specs_01_project_context_winning_angle",
+      "community": 9,
+      "norm_label": "winning angle"
+    },
+    {
+      "label": "MVP honesty",
+      "file_type": "document",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "specs_01_project_context_mvp_honesty",
+      "community": 9,
+      "norm_label": "mvp honesty"
+    },
+    {
+      "label": "02_ARCHITECTURE.md",
+      "file_type": "document",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_02_architecture",
+      "community": 7,
+      "norm_label": "02_architecture.md"
+    },
+    {
+      "label": "02 \u2014 High-Level Architecture",
+      "file_type": "document",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_02_architecture_02_high_level_architecture",
+      "community": 7,
+      "norm_label": "02 \u2014 high-level architecture"
+    },
+    {
+      "label": "1. Core flow",
+      "file_type": "document",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "specs_02_architecture_1_core_flow",
+      "community": 7,
+      "norm_label": "1. core flow"
+    },
+    {
+      "label": "2. Layers",
+      "file_type": "document",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "specs_02_architecture_2_layers",
+      "community": 7,
+      "norm_label": "2. layers"
+    },
+    {
+      "label": "3. System diagram",
+      "file_type": "document",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "specs_02_architecture_3_system_diagram",
+      "community": 7,
+      "norm_label": "3. system diagram"
+    },
+    {
+      "label": "4. Module-to-module data contracts",
+      "file_type": "document",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "specs_02_architecture_4_module_to_module_data_contracts",
+      "community": 7,
+      "norm_label": "4. module-to-module data contracts"
+    },
+    {
+      "label": "5. ML placement (full stack)",
+      "file_type": "document",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "specs_02_architecture_5_ml_placement_full_stack",
+      "community": 7,
+      "norm_label": "5. ml placement (full stack)"
+    },
+    {
+      "label": "6. Both heatmaps (decision: Both)",
+      "file_type": "document",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L80",
+      "_origin": "ast",
+      "id": "specs_02_architecture_6_both_heatmaps_decision_both",
+      "community": 7,
+      "norm_label": "6. both heatmaps (decision: both)"
+    },
+    {
+      "label": "7. Architectural decisions",
+      "file_type": "document",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L90",
+      "_origin": "ast",
+      "id": "specs_02_architecture_7_architectural_decisions",
+      "community": 7,
+      "norm_label": "7. architectural decisions"
+    },
+    {
+      "label": "8. Recommended tech stack",
+      "file_type": "document",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "specs_02_architecture_8_recommended_tech_stack",
+      "community": 7,
+      "norm_label": "8. recommended tech stack"
+    },
+    {
+      "label": "03_DATA_MODEL.md",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_03_data_model",
+      "community": 0,
+      "norm_label": "03_data_model.md"
+    },
+    {
+      "label": "03 \u2014 Unified Data Model",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_03_data_model_03_unified_data_model",
+      "community": 0,
+      "norm_label": "03 \u2014 unified data model"
+    },
+    {
+      "label": "1. Canonical entity graph",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "specs_03_data_model_1_canonical_entity_graph",
+      "community": 0,
+      "norm_label": "1. canonical entity graph"
+    },
+    {
+      "label": "2. Workload",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "specs_03_data_model_2_workload",
+      "community": 0,
+      "norm_label": "2. workload"
+    },
+    {
+      "label": "3. TelemetrySnapshot (Module 1 input)",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "specs_03_data_model_3_telemetrysnapshot_module_1_input",
+      "community": 0,
+      "norm_label": "3. telemetrysnapshot (module 1 input)"
+    },
+    {
+      "label": "4. Issue (Module 1 output / Module 2 input)",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "specs_03_data_model_4_issue_module_1_output_module_2_input",
+      "community": 0,
+      "norm_label": "4. issue (module 1 output / module 2 input)"
+    },
+    {
+      "label": "5. Recommendation (Module 2 output / Module 3 input)",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L97",
+      "_origin": "ast",
+      "id": "specs_03_data_model_5_recommendation_module_2_output_module_3_input",
+      "community": 0,
+      "norm_label": "5. recommendation (module 2 output / module 3 input)"
+    },
+    {
+      "label": "6. Remediation Result + Report",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "specs_03_data_model_6_remediation_result_report",
+      "community": 0,
+      "norm_label": "6. remediation result + report"
+    },
+    {
+      "label": "7. Kept old-spec objects",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L142",
+      "_origin": "ast",
+      "id": "specs_03_data_model_7_kept_old_spec_objects",
+      "community": 0,
+      "norm_label": "7. kept old-spec objects"
+    },
+    {
+      "label": "SecurityFinding",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L144",
+      "_origin": "ast",
+      "id": "specs_03_data_model_securityfinding",
+      "community": 0,
+      "norm_label": "securityfinding"
+    },
+    {
+      "label": "GreenOpsFinding",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L147",
+      "_origin": "ast",
+      "id": "specs_03_data_model_greenopsfinding",
+      "community": 0,
+      "norm_label": "greenopsfinding"
+    },
+    {
+      "label": "PriorityScore (drives composite heatmap) \u2014 see `07`",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "specs_03_data_model_priorityscore_drives_composite_heatmap_see_07",
+      "community": 0,
+      "norm_label": "priorityscore (drives composite heatmap) \u2014 see `07`"
+    },
+    {
+      "label": "DimensionScores (drives matrix heatmap)",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "specs_03_data_model_dimensionscores_drives_matrix_heatmap",
+      "community": 0,
+      "norm_label": "dimensionscores (drives matrix heatmap)"
+    },
+    {
+      "label": "DowntimePrediction (kept) \u2014 see `08`",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "specs_03_data_model_downtimeprediction_kept_see_08",
+      "community": 0,
+      "norm_label": "downtimeprediction (kept) \u2014 see `08`"
+    },
+    {
+      "label": "Alert (kept) \u2014 see `07`",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L159",
+      "_origin": "ast",
+      "id": "specs_03_data_model_alert_kept_see_07",
+      "community": 0,
+      "norm_label": "alert (kept) \u2014 see `07`"
+    },
+    {
+      "label": "AuditLog \u2014 see `13`",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "specs_03_data_model_auditlog_see_13",
+      "community": 0,
+      "norm_label": "auditlog \u2014 see `13`"
+    },
+    {
+      "label": "8. MCP tool registry (runbooks \u2194 connectors)",
+      "file_type": "document",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L165",
+      "_origin": "ast",
+      "id": "specs_03_data_model_8_mcp_tool_registry_runbooks_connectors",
+      "community": 0,
+      "norm_label": "8. mcp tool registry (runbooks \u2194 connectors)"
+    },
+    {
+      "label": "04_DETECTION_AND_INSIGHT_SDD.md",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd",
+      "community": 3,
+      "norm_label": "04_detection_and_insight_sdd.md"
+    },
+    {
+      "label": "04 \u2014 SDD: Module 1, Detection & Insight",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "community": 3,
+      "norm_label": "04 \u2014 sdd: module 1, detection & insight"
+    },
+    {
+      "label": "1. Purpose",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_1_purpose",
+      "community": 3,
+      "norm_label": "1. purpose"
+    },
+    {
+      "label": "2. Flow",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_2_flow",
+      "community": 3,
+      "norm_label": "2. flow"
+    },
+    {
+      "label": "3. Input / Output",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_3_input_output",
+      "community": 3,
+      "norm_label": "3. input / output"
+    },
+    {
+      "label": "4. Isolation Forest (anomaly)",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_4_isolation_forest_anomaly",
+      "community": 3,
+      "norm_label": "4. isolation forest (anomaly)"
+    },
+    {
+      "label": "5. Rule-based issue classification",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_5_rule_based_issue_classification",
+      "community": 3,
+      "norm_label": "5. rule-based issue classification"
+    },
+    {
+      "label": "6. Severity logic",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_6_severity_logic",
+      "community": 3,
+      "norm_label": "6. severity logic"
+    },
+    {
+      "label": "7. Explainability (SHAP)",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_7_explainability_shap",
+      "community": 3,
+      "norm_label": "7. explainability (shap)"
+    },
+    {
+      "label": "8. LLM explanation",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_8_llm_explanation",
+      "community": 3,
+      "norm_label": "8. llm explanation"
+    },
+    {
+      "label": "9. Fallbacks",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_9_fallbacks",
+      "community": 3,
+      "norm_label": "9. fallbacks"
+    },
+    {
+      "label": "10. Acceptance criteria",
+      "file_type": "document",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L78",
+      "_origin": "ast",
+      "id": "specs_04_detection_and_insight_sdd_10_acceptance_criteria",
+      "community": 3,
+      "norm_label": "10. acceptance criteria"
+    },
+    {
+      "label": "05_NEXT_BEST_ACTION_SDD.md",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd",
+      "community": 4,
+      "norm_label": "05_next_best_action_sdd.md"
+    },
+    {
+      "label": "05 \u2014 SDD: Module 2, Next Best Action",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "community": 4,
+      "norm_label": "05 \u2014 sdd: module 2, next best action"
+    },
+    {
+      "label": "1. Purpose",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd_1_purpose",
+      "community": 4,
+      "norm_label": "1. purpose"
+    },
+    {
+      "label": "2. Flow",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd_2_flow",
+      "community": 4,
+      "norm_label": "2. flow"
+    },
+    {
+      "label": "3. Approach",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd_3_approach",
+      "community": 4,
+      "norm_label": "3. approach"
+    },
+    {
+      "label": "4. Recommendation rules",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd_4_recommendation_rules",
+      "community": 4,
+      "norm_label": "4. recommendation rules"
+    },
+    {
+      "label": "5. Risk level",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd_5_risk_level",
+      "community": 4,
+      "norm_label": "5. risk level"
+    },
+    {
+      "label": "6. Execution mode",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd_6_execution_mode",
+      "community": 4,
+      "norm_label": "6. execution mode"
+    },
+    {
+      "label": "7. Optimization Impact Forecast (key new feature)",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd_7_optimization_impact_forecast_key_new_feature",
+      "community": 4,
+      "norm_label": "7. optimization impact forecast (key new feature)"
+    },
+    {
+      "label": "8. Consolidation (kept from old spec)",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd_8_consolidation_kept_from_old_spec",
+      "community": 4,
+      "norm_label": "8. consolidation (kept from old spec)"
+    },
+    {
+      "label": "9. Acceptance criteria",
+      "file_type": "document",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "specs_05_next_best_action_sdd_9_acceptance_criteria",
+      "community": 4,
+      "norm_label": "9. acceptance criteria"
+    },
+    {
+      "label": "06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd",
+      "community": 5,
+      "norm_label": "06_guardrailed_self_healing_sdd.md"
+    },
+    {
+      "label": "06 \u2014 SDD: Module 3, Guardrailed Self-Healing",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "community": 5,
+      "norm_label": "06 \u2014 sdd: module 3, guardrailed self-healing"
+    },
+    {
+      "label": "1. Purpose",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd_1_purpose",
+      "community": 5,
+      "norm_label": "1. purpose"
+    },
+    {
+      "label": "2. Execution sequence (kept from old spec)",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd_2_execution_sequence_kept_from_old_spec",
+      "community": 5,
+      "norm_label": "2. execution sequence (kept from old spec)"
+    },
+    {
+      "label": "3. Execution paths",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd_3_execution_paths",
+      "community": 5,
+      "norm_label": "3. execution paths"
+    },
+    {
+      "label": "4. Safety rules (authoritative \u2014 see `13` for full detail)",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd_4_safety_rules_authoritative_see_13_for_full_detail",
+      "community": 5,
+      "norm_label": "4. safety rules (authoritative \u2014 see `13` for full detail)"
+    },
+    {
+      "label": "5. Runbooks + rollback (kept, detailed)",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd_5_runbooks_rollback_kept_detailed",
+      "community": 5,
+      "norm_label": "5. runbooks + rollback (kept, detailed)"
+    },
+    {
+      "label": "6. Simulated MCP connectors",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd_6_simulated_mcp_connectors",
+      "community": 5,
+      "norm_label": "6. simulated mcp connectors"
+    },
+    {
+      "label": "7. Approval Queue + escalation timers (kept from old spec)",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd_7_approval_queue_escalation_timers_kept_from_old_spec",
+      "community": 5,
+      "norm_label": "7. approval queue + escalation timers (kept from old spec)"
+    },
+    {
+      "label": "8. Output",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd_8_output",
+      "community": 5,
+      "norm_label": "8. output"
+    },
+    {
+      "label": "9. Acceptance criteria",
+      "file_type": "document",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "specs_06_guardrailed_self_healing_sdd_9_acceptance_criteria",
+      "community": 5,
+      "norm_label": "9. acceptance criteria"
+    },
+    {
+      "label": "07_SCORING_AND_ALERTS_SDD.md",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd",
+      "community": 2,
+      "norm_label": "07_scoring_and_alerts_sdd.md"
+    },
+    {
+      "label": "07 \u2014 SDD: Scoring & Alerts (kept from old spec)",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_07_sdd_scoring_alerts_kept_from_old_spec",
+      "community": 2,
+      "norm_label": "07 \u2014 sdd: scoring & alerts (kept from old spec)"
+    },
+    {
+      "label": "Part A \u2014 Scoring Engine",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_part_a_scoring_engine",
+      "community": 2,
+      "norm_label": "part a \u2014 scoring engine"
+    },
+    {
+      "label": "A1. Weighted Priority Score",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_a1_weighted_priority_score",
+      "community": 2,
+      "norm_label": "a1. weighted priority score"
+    },
+    {
+      "label": "A2. Rules",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_a2_rules",
+      "community": 2,
+      "norm_label": "a2. rules"
+    },
+    {
+      "label": "A3. Component scores (existing formulas, kept)",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_a3_component_scores_existing_formulas_kept",
+      "community": 2,
+      "norm_label": "a3. component scores (existing formulas, kept)"
+    },
+    {
+      "label": "A4. DimensionScores (matrix heatmap)",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_a4_dimensionscores_matrix_heatmap",
+      "community": 2,
+      "norm_label": "a4. dimensionscores (matrix heatmap)"
+    },
+    {
+      "label": "Part B \u2014 Alert System",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_part_b_alert_system",
+      "community": 2,
+      "norm_label": "part b \u2014 alert system"
+    },
+    {
+      "label": "B1. Conditions",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_b1_conditions",
+      "community": 2,
+      "norm_label": "b1. conditions"
+    },
+    {
+      "label": "B2. Severity from Priority_Score",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_b2_severity_from_priority_score",
+      "community": 2,
+      "norm_label": "b2. severity from priority_score"
+    },
+    {
+      "label": "B3. Delivery & lifecycle",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_b3_delivery_lifecycle",
+      "community": 2,
+      "norm_label": "b3. delivery & lifecycle"
+    },
+    {
+      "label": "B4. Required fields",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_b4_required_fields",
+      "community": 2,
+      "norm_label": "b4. required fields"
+    },
+    {
+      "label": "B5. Acceptance criteria",
+      "file_type": "document",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "specs_07_scoring_and_alerts_sdd_b5_acceptance_criteria",
+      "community": 2,
+      "norm_label": "b5. acceptance criteria"
+    },
+    {
+      "label": "08_DOWNTIME_PREDICTION_SDD.md",
+      "file_type": "document",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_08_downtime_prediction_sdd",
+      "community": 10,
+      "norm_label": "08_downtime_prediction_sdd.md"
+    },
+    {
+      "label": "08 \u2014 SDD: AI Downtime Prediction (KEPT)",
+      "file_type": "document",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_08_downtime_prediction_sdd_08_sdd_ai_downtime_prediction_kept",
+      "community": 10,
+      "norm_label": "08 \u2014 sdd: ai downtime prediction (kept)"
+    },
+    {
+      "label": "1. Purpose",
+      "file_type": "document",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "specs_08_downtime_prediction_sdd_1_purpose",
+      "community": 10,
+      "norm_label": "1. purpose"
+    },
+    {
+      "label": "2. Inputs",
+      "file_type": "document",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "specs_08_downtime_prediction_sdd_2_inputs",
+      "community": 10,
+      "norm_label": "2. inputs"
+    },
+    {
+      "label": "3. Outputs (`DowntimePrediction`)",
+      "file_type": "document",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "specs_08_downtime_prediction_sdd_3_outputs_downtimeprediction",
+      "community": 10,
+      "norm_label": "3. outputs (`downtimeprediction`)"
+    },
+    {
+      "label": "4. Relationship to the other ML",
+      "file_type": "document",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "specs_08_downtime_prediction_sdd_4_relationship_to_the_other_ml",
+      "community": 10,
+      "norm_label": "4. relationship to the other ml"
+    },
+    {
+      "label": "5. UI",
+      "file_type": "document",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "specs_08_downtime_prediction_sdd_5_ui",
+      "community": 10,
+      "norm_label": "5. ui"
+    },
+    {
+      "label": "6. Fallback",
+      "file_type": "document",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "specs_08_downtime_prediction_sdd_6_fallback",
+      "community": 10,
+      "norm_label": "6. fallback"
+    },
+    {
+      "label": "7. Acceptance criteria",
+      "file_type": "document",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "specs_08_downtime_prediction_sdd_7_acceptance_criteria",
+      "community": 10,
+      "norm_label": "7. acceptance criteria"
+    },
+    {
+      "label": "09_ML_AND_FORECASTING_SDD.md",
+      "file_type": "document",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_09_ml_and_forecasting_sdd",
+      "community": 11,
+      "norm_label": "09_ml_and_forecasting_sdd.md"
+    },
+    {
+      "label": "09 \u2014 SDD: ML, Explainability & Forecasting (full stack)",
+      "file_type": "document",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_09_ml_and_forecasting_sdd_09_sdd_ml_explainability_forecasting_full_stack",
+      "community": 11,
+      "norm_label": "09 \u2014 sdd: ml, explainability & forecasting (full stack)"
+    },
+    {
+      "label": "1. Isolation Forest",
+      "file_type": "document",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "specs_09_ml_and_forecasting_sdd_1_isolation_forest",
+      "community": 11,
+      "norm_label": "1. isolation forest"
+    },
+    {
+      "label": "2. SHAP / SHAP-style",
+      "file_type": "document",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "specs_09_ml_and_forecasting_sdd_2_shap_shap_style",
+      "community": 11,
+      "norm_label": "2. shap / shap-style"
+    },
+    {
+      "label": "3. XGBoost forecasting",
+      "file_type": "document",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "specs_09_ml_and_forecasting_sdd_3_xgboost_forecasting",
+      "community": 11,
+      "norm_label": "3. xgboost forecasting"
+    },
+    {
+      "label": "4. Synthetic training data",
+      "file_type": "document",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "specs_09_ml_and_forecasting_sdd_4_synthetic_training_data",
+      "community": 11,
+      "norm_label": "4. synthetic training data"
+    },
+    {
+      "label": "5. Optimization Impact Forecast",
+      "file_type": "document",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L45",
+      "_origin": "ast",
+      "id": "specs_09_ml_and_forecasting_sdd_5_optimization_impact_forecast",
+      "community": 11,
+      "norm_label": "5. optimization impact forecast"
+    },
+    {
+      "label": "6. Fallbacks (must keep output schema)",
+      "file_type": "document",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "specs_09_ml_and_forecasting_sdd_6_fallbacks_must_keep_output_schema",
+      "community": 11,
+      "norm_label": "6. fallbacks (must keep output schema)"
+    },
+    {
+      "label": "7. Acceptance criteria",
+      "file_type": "document",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "specs_09_ml_and_forecasting_sdd_7_acceptance_criteria",
+      "community": 11,
+      "norm_label": "7. acceptance criteria"
+    },
+    {
+      "label": "10_API_CONTRACTS.md",
+      "file_type": "document",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_10_api_contracts",
+      "community": 8,
+      "norm_label": "10_api_contracts.md"
+    },
+    {
+      "label": "10 \u2014 API Contracts (merged)",
+      "file_type": "document",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_10_api_contracts_10_api_contracts_merged",
+      "community": 8,
+      "norm_label": "10 \u2014 api contracts (merged)"
+    },
+    {
+      "label": "1. Telemetry & workloads",
+      "file_type": "document",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "specs_10_api_contracts_1_telemetry_workloads",
+      "community": 8,
+      "norm_label": "1. telemetry & workloads"
+    },
+    {
+      "label": "2. Detection / Issues",
+      "file_type": "document",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "specs_10_api_contracts_2_detection_issues",
+      "community": 8,
+      "norm_label": "2. detection / issues"
+    },
+    {
+      "label": "3. Recommendations / Forecast",
+      "file_type": "document",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "specs_10_api_contracts_3_recommendations_forecast",
+      "community": 8,
+      "norm_label": "3. recommendations / forecast"
+    },
+    {
+      "label": "4. Remediation / Approvals",
+      "file_type": "document",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "specs_10_api_contracts_4_remediation_approvals",
+      "community": 8,
+      "norm_label": "4. remediation / approvals"
+    },
+    {
+      "label": "5. Scoring / Alerts / Audit",
+      "file_type": "document",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "specs_10_api_contracts_5_scoring_alerts_audit",
+      "community": 8,
+      "norm_label": "5. scoring / alerts / audit"
+    },
+    {
+      "label": "6. Dashboard",
+      "file_type": "document",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "specs_10_api_contracts_6_dashboard",
+      "community": 8,
+      "norm_label": "6. dashboard"
+    },
+    {
+      "label": "7. Mock controller",
+      "file_type": "document",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "specs_10_api_contracts_7_mock_controller",
+      "community": 8,
+      "norm_label": "7. mock controller"
+    },
+    {
+      "label": "8. Realtime",
+      "file_type": "document",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "specs_10_api_contracts_8_realtime",
+      "community": 8,
+      "norm_label": "8. realtime"
+    },
+    {
+      "label": "11_UI_UX_SPECIFICATION.md",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification",
+      "community": 1,
+      "norm_label": "11_ui_ux_specification.md"
+    },
+    {
+      "label": "11 \u2014 UI/UX Specification",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "community": 1,
+      "norm_label": "11 \u2014 ui/ux specification"
+    },
+    {
+      "label": "Navigation",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_navigation",
+      "community": 1,
+      "norm_label": "navigation"
+    },
+    {
+      "label": "1. Dashboard / Heatmap landing \u2014 BOTH views (decision)",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_1_dashboard_heatmap_landing_both_views_decision",
+      "community": 1,
+      "norm_label": "1. dashboard / heatmap landing \u2014 both views (decision)"
+    },
+    {
+      "label": "2. Issues List (NEW page)",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_2_issues_list_new_page",
+      "community": 1,
+      "norm_label": "2. issues list (new page)"
+    },
+    {
+      "label": "3. Issue / Recommendation Detail (NEW page)",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_3_issue_recommendation_detail_new_page",
+      "community": 1,
+      "norm_label": "3. issue / recommendation detail (new page)"
+    },
+    {
+      "label": "XAI Explanation Card (NEW component)",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_xai_explanation_card_new_component",
+      "community": 1,
+      "norm_label": "xai explanation card (new component)"
+    },
+    {
+      "label": "Optimization Impact Forecast (NEW component)",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_optimization_impact_forecast_new_component",
+      "community": 1,
+      "norm_label": "optimization impact forecast (new component)"
+    },
+    {
+      "label": "4. Workload Detail tabs (kept from prototype)",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_4_workload_detail_tabs_kept_from_prototype",
+      "community": 1,
+      "norm_label": "4. workload detail tabs (kept from prototype)"
+    },
+    {
+      "label": "5. Self-Healing workflow page",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L53",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_5_self_healing_workflow_page",
+      "community": 1,
+      "norm_label": "5. self-healing workflow page"
+    },
+    {
+      "label": "6. Approval Queue (kept)",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_6_approval_queue_kept",
+      "community": 1,
+      "norm_label": "6. approval queue (kept)"
+    },
+    {
+      "label": "7. Remediation / Post-Incident Report (kept)",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_7_remediation_post_incident_report_kept",
+      "community": 1,
+      "norm_label": "7. remediation / post-incident report (kept)"
+    },
+    {
+      "label": "8. Audit Logs (NEW page)",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_8_audit_logs_new_page",
+      "community": 1,
+      "norm_label": "8. audit logs (new page)"
+    },
+    {
+      "label": "9. Mock Data Controller (NEW page)",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_9_mock_data_controller_new_page",
+      "community": 1,
+      "norm_label": "9. mock data controller (new page)"
+    },
+    {
+      "label": "10. Acceptance criteria",
+      "file_type": "document",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L74",
+      "_origin": "ast",
+      "id": "specs_11_ui_ux_specification_10_acceptance_criteria",
+      "community": 1,
+      "norm_label": "10. acceptance criteria"
+    },
+    {
+      "label": "12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "file_type": "document",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_12_mock_data_and_demo_scenarios",
+      "community": 12,
+      "norm_label": "12_mock_data_and_demo_scenarios.md"
+    },
+    {
+      "label": "12 \u2014 Mock Data & Demo Scenarios",
+      "file_type": "document",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_12_mock_data_and_demo_scenarios_12_mock_data_demo_scenarios",
+      "community": 12,
+      "norm_label": "12 \u2014 mock data & demo scenarios"
+    },
+    {
+      "label": "1. Generator responsibilities",
+      "file_type": "document",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "specs_12_mock_data_and_demo_scenarios_1_generator_responsibilities",
+      "community": 12,
+      "norm_label": "1. generator responsibilities"
+    },
+    {
+      "label": "2. Synthetic workloads (\u22658)",
+      "file_type": "document",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "specs_12_mock_data_and_demo_scenarios_2_synthetic_workloads_8",
+      "community": 12,
+      "norm_label": "2. synthetic workloads (\u22658)"
+    },
+    {
+      "label": "3. Demo scenarios (trigger \u2192 expected behavior)",
+      "file_type": "document",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "specs_12_mock_data_and_demo_scenarios_3_demo_scenarios_trigger_expected_behavior",
+      "community": 12,
+      "norm_label": "3. demo scenarios (trigger \u2192 expected behavior)"
+    },
+    {
+      "label": "4. Stream + reset",
+      "file_type": "document",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "specs_12_mock_data_and_demo_scenarios_4_stream_reset",
+      "community": 12,
+      "norm_label": "4. stream + reset"
+    },
+    {
+      "label": "5. Deliverables (AI/mock subteam)",
+      "file_type": "document",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "specs_12_mock_data_and_demo_scenarios_5_deliverables_ai_mock_subteam",
+      "community": 12,
+      "norm_label": "5. deliverables (ai/mock subteam)"
+    },
+    {
+      "label": "6. Suggested live demo order",
+      "file_type": "document",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "specs_12_mock_data_and_demo_scenarios_6_suggested_live_demo_order",
+      "community": 12,
+      "norm_label": "6. suggested live demo order"
+    },
+    {
+      "label": "7. Backup plan",
+      "file_type": "document",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "specs_12_mock_data_and_demo_scenarios_7_backup_plan",
+      "community": 12,
+      "norm_label": "7. backup plan"
+    },
+    {
+      "label": "13_SAFETY_GOVERNANCE_AUDIT.md",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit",
+      "community": 6,
+      "norm_label": "13_safety_governance_audit.md"
+    },
+    {
+      "label": "13 \u2014 Safety, Governance & Audit",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "community": 6,
+      "norm_label": "13 \u2014 safety, governance & audit"
+    },
+    {
+      "label": "1. Decision question",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit_1_decision_question",
+      "community": 6,
+      "norm_label": "1. decision question"
+    },
+    {
+      "label": "2. Auto-fix allowed (ALL must hold)",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit_2_auto_fix_allowed_all_must_hold",
+      "community": 6,
+      "norm_label": "2. auto-fix allowed (all must hold)"
+    },
+    {
+      "label": "3. Approval required (any)",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit_3_approval_required_any",
+      "community": 6,
+      "norm_label": "3. approval required (any)"
+    },
+    {
+      "label": "4. Human escalation required (any)",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit_4_human_escalation_required_any",
+      "community": 6,
+      "norm_label": "4. human escalation required (any)"
+    },
+    {
+      "label": "5. Prohibited auto actions (never)",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit_5_prohibited_auto_actions_never",
+      "community": 6,
+      "norm_label": "5. prohibited auto actions (never)"
+    },
+    {
+      "label": "6. Audit log (every meaningful event)",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit_6_audit_log_every_meaningful_event",
+      "community": 6,
+      "norm_label": "6. audit log (every meaningful event)"
+    },
+    {
+      "label": "7. Remediation report (after auto-fix / approved / escalation)",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit_7_remediation_report_after_auto_fix_approved_escalation",
+      "community": 6,
+      "norm_label": "7. remediation report (after auto-fix / approved / escalation)"
+    },
+    {
+      "label": "8. Governance UI",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit_8_governance_ui",
+      "community": 6,
+      "norm_label": "8. governance ui"
+    },
+    {
+      "label": "9. Acceptance criteria",
+      "file_type": "document",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "specs_13_safety_governance_audit_9_acceptance_criteria",
+      "community": 6,
+      "norm_label": "9. acceptance criteria"
+    },
+    {
+      "label": "14_IMPLEMENTATION_PLAN.md",
+      "file_type": "document",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_14_implementation_plan",
+      "community": 13,
+      "norm_label": "14_implementation_plan.md"
+    },
+    {
+      "label": "14 \u2014 Implementation Plan (phased)",
+      "file_type": "document",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_14_implementation_plan_14_implementation_plan_phased",
+      "community": 13,
+      "norm_label": "14 \u2014 implementation plan (phased)"
+    },
+    {
+      "label": "P0 \u2014 Demo-critical (must-have for the pitch)",
+      "file_type": "document",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "specs_14_implementation_plan_p0_demo_critical_must_have_for_the_pitch",
+      "community": 13,
+      "norm_label": "p0 \u2014 demo-critical (must-have for the pitch)"
+    },
+    {
+      "label": "P1 \u2014 Credibility & governance",
+      "file_type": "document",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "specs_14_implementation_plan_p1_credibility_governance",
+      "community": 13,
+      "norm_label": "p1 \u2014 credibility & governance"
+    },
+    {
+      "label": "P2 \u2014 Depth (stretch; kept-from-old-spec)",
+      "file_type": "document",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "specs_14_implementation_plan_p2_depth_stretch_kept_from_old_spec",
+      "community": 13,
+      "norm_label": "p2 \u2014 depth (stretch; kept-from-old-spec)"
+    },
+    {
+      "label": "Team split",
+      "file_type": "document",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "specs_14_implementation_plan_team_split",
+      "community": 13,
+      "norm_label": "team split"
+    },
+    {
+      "label": "Suggested file structure",
+      "file_type": "document",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "specs_14_implementation_plan_suggested_file_structure",
+      "community": 13,
+      "norm_label": "suggested file structure"
+    },
+    {
+      "label": "Engineering risks",
+      "file_type": "document",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "specs_14_implementation_plan_engineering_risks",
+      "community": 13,
+      "norm_label": "engineering risks"
+    },
+    {
+      "label": "15_TRACEABILITY_MATRIX.md",
+      "file_type": "document",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_15_traceability_matrix",
+      "community": 14,
+      "norm_label": "15_traceability_matrix.md"
+    },
+    {
+      "label": "15 \u2014 Traceability Matrix",
+      "file_type": "document",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "specs_15_traceability_matrix_15_traceability_matrix",
+      "community": 14,
+      "norm_label": "15 \u2014 traceability matrix"
+    },
+    {
+      "label": "A. New HILTI docs \u2192 merged",
+      "file_type": "document",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "specs_15_traceability_matrix_a_new_hilti_docs_merged",
+      "community": 14,
+      "norm_label": "a. new hilti docs \u2192 merged"
+    },
+    {
+      "label": "B. Old CloudGuard requirements \u2192 merged",
+      "file_type": "document",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "specs_15_traceability_matrix_b_old_cloudguard_requirements_merged",
+      "community": 14,
+      "norm_label": "b. old cloudguard requirements \u2192 merged"
+    },
+    {
+      "label": "C. Decisions log",
+      "file_type": "document",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "specs_15_traceability_matrix_c_decisions_log",
+      "community": 14,
+      "norm_label": "c. decisions log"
+    },
+    {
+      "label": "D. Added (new vs prototype) \u2014 the build gaps",
+      "file_type": "document",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "specs_15_traceability_matrix_d_added_new_vs_prototype_the_build_gaps",
+      "community": 14,
+      "norm_label": "d. added (new vs prototype) \u2014 the build gaps"
+    },
+    {
+      "label": "E. Consciously NOT dropped (preserved from old/prototype)",
+      "file_type": "document",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "specs_15_traceability_matrix_e_consciously_not_dropped_preserved_from_old_prototype",
+      "community": 14,
+      "norm_label": "e. consciously not dropped (preserved from old/prototype)"
+    },
+    {
+      "label": "F. Source folders status",
+      "file_type": "document",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "specs_15_traceability_matrix_f_source_folders_status",
+      "community": 14,
+      "norm_label": "f. source folders status"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/00_INDEX.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_00_index",
+      "target": "specs_00_index_reconciled_sdd_cloudguard_greenops_hilti_cloud_intelligence",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/00_INDEX.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "specs_00_index_reconciled_sdd_cloudguard_greenops_hilti_cloud_intelligence",
+      "target": "specs_00_index_engineering_principle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/00_INDEX.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "specs_00_index_reconciled_sdd_cloudguard_greenops_hilti_cloud_intelligence",
+      "target": "specs_00_index_locked_reconciliation_decisions_2026_06_20",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/00_INDEX.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "specs_00_index_reconciled_sdd_cloudguard_greenops_hilti_cloud_intelligence",
+      "target": "specs_00_index_reading_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_01_project_context",
+      "target": "specs_01_project_context_01_project_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "specs_01_project_context_01_project_context",
+      "target": "specs_01_project_context_hackathon",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "specs_01_project_context_01_project_context",
+      "target": "specs_01_project_context_mvp_honesty",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "specs_01_project_context_01_project_context",
+      "target": "specs_01_project_context_problem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "specs_01_project_context_01_project_context",
+      "target": "specs_01_project_context_product_name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "specs_01_project_context_01_project_context",
+      "target": "specs_01_project_context_solution",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "specs_01_project_context_01_project_context",
+      "target": "specs_01_project_context_track_relevance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/01_PROJECT_CONTEXT.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "specs_01_project_context_01_project_context",
+      "target": "specs_01_project_context_winning_angle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_02_architecture",
+      "target": "specs_02_architecture_02_high_level_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "specs_02_architecture_02_high_level_architecture",
+      "target": "specs_02_architecture_1_core_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "specs_02_architecture_02_high_level_architecture",
+      "target": "specs_02_architecture_2_layers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "specs_02_architecture_02_high_level_architecture",
+      "target": "specs_02_architecture_3_system_diagram",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "specs_02_architecture_02_high_level_architecture",
+      "target": "specs_02_architecture_4_module_to_module_data_contracts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "specs_02_architecture_02_high_level_architecture",
+      "target": "specs_02_architecture_5_ml_placement_full_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "specs_02_architecture_02_high_level_architecture",
+      "target": "specs_02_architecture_6_both_heatmaps_decision_both",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "source": "specs_02_architecture_02_high_level_architecture",
+      "target": "specs_02_architecture_7_architectural_decisions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/02_ARCHITECTURE.md",
+      "source_location": "L98",
+      "weight": 1.0,
+      "source": "specs_02_architecture_02_high_level_architecture",
+      "target": "specs_02_architecture_8_recommended_tech_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_03_data_model",
+      "target": "specs_03_data_model_03_unified_data_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "specs_03_data_model_03_unified_data_model",
+      "target": "specs_03_data_model_1_canonical_entity_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "specs_03_data_model_03_unified_data_model",
+      "target": "specs_03_data_model_2_workload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "specs_03_data_model_03_unified_data_model",
+      "target": "specs_03_data_model_3_telemetrysnapshot_module_1_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "specs_03_data_model_03_unified_data_model",
+      "target": "specs_03_data_model_4_issue_module_1_output_module_2_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "source": "specs_03_data_model_03_unified_data_model",
+      "target": "specs_03_data_model_5_recommendation_module_2_output_module_3_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "specs_03_data_model_03_unified_data_model",
+      "target": "specs_03_data_model_6_remediation_result_report",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "specs_03_data_model_03_unified_data_model",
+      "target": "specs_03_data_model_7_kept_old_spec_objects",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L165",
+      "weight": 1.0,
+      "source": "specs_03_data_model_03_unified_data_model",
+      "target": "specs_03_data_model_8_mcp_tool_registry_runbooks_connectors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "specs_03_data_model_7_kept_old_spec_objects",
+      "target": "specs_03_data_model_alert_kept_see_07",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "specs_03_data_model_7_kept_old_spec_objects",
+      "target": "specs_03_data_model_auditlog_see_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "specs_03_data_model_7_kept_old_spec_objects",
+      "target": "specs_03_data_model_dimensionscores_drives_matrix_heatmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "specs_03_data_model_7_kept_old_spec_objects",
+      "target": "specs_03_data_model_downtimeprediction_kept_see_08",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "specs_03_data_model_7_kept_old_spec_objects",
+      "target": "specs_03_data_model_greenopsfinding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "specs_03_data_model_7_kept_old_spec_objects",
+      "target": "specs_03_data_model_priorityscore_drives_composite_heatmap_see_07",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/03_DATA_MODEL.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "specs_03_data_model_7_kept_old_spec_objects",
+      "target": "specs_03_data_model_securityfinding",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd",
+      "target": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "target": "specs_04_detection_and_insight_sdd_10_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "target": "specs_04_detection_and_insight_sdd_1_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "target": "specs_04_detection_and_insight_sdd_2_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "target": "specs_04_detection_and_insight_sdd_3_input_output",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "target": "specs_04_detection_and_insight_sdd_4_isolation_forest_anomaly",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "target": "specs_04_detection_and_insight_sdd_5_rule_based_issue_classification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "target": "specs_04_detection_and_insight_sdd_6_severity_logic",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "target": "specs_04_detection_and_insight_sdd_7_explainability_shap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "target": "specs_04_detection_and_insight_sdd_8_llm_explanation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/04_DETECTION_AND_INSIGHT_SDD.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "specs_04_detection_and_insight_sdd_04_sdd_module_1_detection_insight",
+      "target": "specs_04_detection_and_insight_sdd_9_fallbacks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_05_next_best_action_sdd",
+      "target": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "target": "specs_05_next_best_action_sdd_1_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "target": "specs_05_next_best_action_sdd_2_flow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "target": "specs_05_next_best_action_sdd_3_approach",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "target": "specs_05_next_best_action_sdd_4_recommendation_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "target": "specs_05_next_best_action_sdd_5_risk_level",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "target": "specs_05_next_best_action_sdd_6_execution_mode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "target": "specs_05_next_best_action_sdd_7_optimization_impact_forecast_key_new_feature",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "target": "specs_05_next_best_action_sdd_8_consolidation_kept_from_old_spec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/05_NEXT_BEST_ACTION_SDD.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "specs_05_next_best_action_sdd_05_sdd_module_2_next_best_action",
+      "target": "specs_05_next_best_action_sdd_9_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_06_guardrailed_self_healing_sdd",
+      "target": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "target": "specs_06_guardrailed_self_healing_sdd_1_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "target": "specs_06_guardrailed_self_healing_sdd_2_execution_sequence_kept_from_old_spec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "target": "specs_06_guardrailed_self_healing_sdd_3_execution_paths",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "target": "specs_06_guardrailed_self_healing_sdd_4_safety_rules_authoritative_see_13_for_full_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "target": "specs_06_guardrailed_self_healing_sdd_5_runbooks_rollback_kept_detailed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "target": "specs_06_guardrailed_self_healing_sdd_6_simulated_mcp_connectors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "target": "specs_06_guardrailed_self_healing_sdd_7_approval_queue_escalation_timers_kept_from_old_spec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "target": "specs_06_guardrailed_self_healing_sdd_8_output",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/06_GUARDRAILED_SELF_HEALING_SDD.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "specs_06_guardrailed_self_healing_sdd_06_sdd_module_3_guardrailed_self_healing",
+      "target": "specs_06_guardrailed_self_healing_sdd_9_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd",
+      "target": "specs_07_scoring_and_alerts_sdd_07_sdd_scoring_alerts_kept_from_old_spec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd",
+      "target": "specs_07_scoring_and_alerts_sdd_part_a_scoring_engine",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd",
+      "target": "specs_07_scoring_and_alerts_sdd_part_b_alert_system",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd_part_a_scoring_engine",
+      "target": "specs_07_scoring_and_alerts_sdd_a1_weighted_priority_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd_part_a_scoring_engine",
+      "target": "specs_07_scoring_and_alerts_sdd_a2_rules",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd_part_a_scoring_engine",
+      "target": "specs_07_scoring_and_alerts_sdd_a3_component_scores_existing_formulas_kept",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd_part_a_scoring_engine",
+      "target": "specs_07_scoring_and_alerts_sdd_a4_dimensionscores_matrix_heatmap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd_part_b_alert_system",
+      "target": "specs_07_scoring_and_alerts_sdd_b1_conditions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd_part_b_alert_system",
+      "target": "specs_07_scoring_and_alerts_sdd_b2_severity_from_priority_score",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd_part_b_alert_system",
+      "target": "specs_07_scoring_and_alerts_sdd_b3_delivery_lifecycle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd_part_b_alert_system",
+      "target": "specs_07_scoring_and_alerts_sdd_b4_required_fields",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/07_SCORING_AND_ALERTS_SDD.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "specs_07_scoring_and_alerts_sdd_part_b_alert_system",
+      "target": "specs_07_scoring_and_alerts_sdd_b5_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_08_downtime_prediction_sdd",
+      "target": "specs_08_downtime_prediction_sdd_08_sdd_ai_downtime_prediction_kept",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "specs_08_downtime_prediction_sdd_08_sdd_ai_downtime_prediction_kept",
+      "target": "specs_08_downtime_prediction_sdd_1_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "specs_08_downtime_prediction_sdd_08_sdd_ai_downtime_prediction_kept",
+      "target": "specs_08_downtime_prediction_sdd_2_inputs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "specs_08_downtime_prediction_sdd_08_sdd_ai_downtime_prediction_kept",
+      "target": "specs_08_downtime_prediction_sdd_3_outputs_downtimeprediction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "specs_08_downtime_prediction_sdd_08_sdd_ai_downtime_prediction_kept",
+      "target": "specs_08_downtime_prediction_sdd_4_relationship_to_the_other_ml",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "specs_08_downtime_prediction_sdd_08_sdd_ai_downtime_prediction_kept",
+      "target": "specs_08_downtime_prediction_sdd_5_ui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "specs_08_downtime_prediction_sdd_08_sdd_ai_downtime_prediction_kept",
+      "target": "specs_08_downtime_prediction_sdd_6_fallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/08_DOWNTIME_PREDICTION_SDD.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "specs_08_downtime_prediction_sdd_08_sdd_ai_downtime_prediction_kept",
+      "target": "specs_08_downtime_prediction_sdd_7_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_09_ml_and_forecasting_sdd",
+      "target": "specs_09_ml_and_forecasting_sdd_09_sdd_ml_explainability_forecasting_full_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "specs_09_ml_and_forecasting_sdd_09_sdd_ml_explainability_forecasting_full_stack",
+      "target": "specs_09_ml_and_forecasting_sdd_1_isolation_forest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "specs_09_ml_and_forecasting_sdd_09_sdd_ml_explainability_forecasting_full_stack",
+      "target": "specs_09_ml_and_forecasting_sdd_2_shap_shap_style",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "specs_09_ml_and_forecasting_sdd_09_sdd_ml_explainability_forecasting_full_stack",
+      "target": "specs_09_ml_and_forecasting_sdd_3_xgboost_forecasting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "specs_09_ml_and_forecasting_sdd_09_sdd_ml_explainability_forecasting_full_stack",
+      "target": "specs_09_ml_and_forecasting_sdd_4_synthetic_training_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "specs_09_ml_and_forecasting_sdd_09_sdd_ml_explainability_forecasting_full_stack",
+      "target": "specs_09_ml_and_forecasting_sdd_5_optimization_impact_forecast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "specs_09_ml_and_forecasting_sdd_09_sdd_ml_explainability_forecasting_full_stack",
+      "target": "specs_09_ml_and_forecasting_sdd_6_fallbacks_must_keep_output_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/09_ML_AND_FORECASTING_SDD.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "specs_09_ml_and_forecasting_sdd_09_sdd_ml_explainability_forecasting_full_stack",
+      "target": "specs_09_ml_and_forecasting_sdd_7_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_10_api_contracts",
+      "target": "specs_10_api_contracts_10_api_contracts_merged",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "specs_10_api_contracts_10_api_contracts_merged",
+      "target": "specs_10_api_contracts_1_telemetry_workloads",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "specs_10_api_contracts_10_api_contracts_merged",
+      "target": "specs_10_api_contracts_2_detection_issues",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "specs_10_api_contracts_10_api_contracts_merged",
+      "target": "specs_10_api_contracts_3_recommendations_forecast",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "specs_10_api_contracts_10_api_contracts_merged",
+      "target": "specs_10_api_contracts_4_remediation_approvals",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "specs_10_api_contracts_10_api_contracts_merged",
+      "target": "specs_10_api_contracts_5_scoring_alerts_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "specs_10_api_contracts_10_api_contracts_merged",
+      "target": "specs_10_api_contracts_6_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "specs_10_api_contracts_10_api_contracts_merged",
+      "target": "specs_10_api_contracts_7_mock_controller",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/10_API_CONTRACTS.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "specs_10_api_contracts_10_api_contracts_merged",
+      "target": "specs_10_api_contracts_8_realtime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_10_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_1_dashboard_heatmap_landing_both_views_decision",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_2_issues_list_new_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_3_issue_recommendation_detail_new_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_4_workload_detail_tabs_kept_from_prototype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_5_self_healing_workflow_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L57",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_6_approval_queue_kept",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_7_remediation_post_incident_report_kept",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_8_audit_logs_new_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_9_mock_data_controller_new_page",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_11_ui_ux_specification",
+      "target": "specs_11_ui_ux_specification_navigation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_3_issue_recommendation_detail_new_page",
+      "target": "specs_11_ui_ux_specification_optimization_impact_forecast_new_component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/11_UI_UX_SPECIFICATION.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "specs_11_ui_ux_specification_3_issue_recommendation_detail_new_page",
+      "target": "specs_11_ui_ux_specification_xai_explanation_card_new_component",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_12_mock_data_and_demo_scenarios",
+      "target": "specs_12_mock_data_and_demo_scenarios_12_mock_data_demo_scenarios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "specs_12_mock_data_and_demo_scenarios_12_mock_data_demo_scenarios",
+      "target": "specs_12_mock_data_and_demo_scenarios_1_generator_responsibilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "specs_12_mock_data_and_demo_scenarios_12_mock_data_demo_scenarios",
+      "target": "specs_12_mock_data_and_demo_scenarios_2_synthetic_workloads_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "specs_12_mock_data_and_demo_scenarios_12_mock_data_demo_scenarios",
+      "target": "specs_12_mock_data_and_demo_scenarios_3_demo_scenarios_trigger_expected_behavior",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "specs_12_mock_data_and_demo_scenarios_12_mock_data_demo_scenarios",
+      "target": "specs_12_mock_data_and_demo_scenarios_4_stream_reset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "specs_12_mock_data_and_demo_scenarios_12_mock_data_demo_scenarios",
+      "target": "specs_12_mock_data_and_demo_scenarios_5_deliverables_ai_mock_subteam",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "specs_12_mock_data_and_demo_scenarios_12_mock_data_demo_scenarios",
+      "target": "specs_12_mock_data_and_demo_scenarios_6_suggested_live_demo_order",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "specs_12_mock_data_and_demo_scenarios_12_mock_data_demo_scenarios",
+      "target": "specs_12_mock_data_and_demo_scenarios_7_backup_plan",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_13_safety_governance_audit",
+      "target": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "target": "specs_13_safety_governance_audit_1_decision_question",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "target": "specs_13_safety_governance_audit_2_auto_fix_allowed_all_must_hold",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "target": "specs_13_safety_governance_audit_3_approval_required_any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "target": "specs_13_safety_governance_audit_4_human_escalation_required_any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "target": "specs_13_safety_governance_audit_5_prohibited_auto_actions_never",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "target": "specs_13_safety_governance_audit_6_audit_log_every_meaningful_event",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "target": "specs_13_safety_governance_audit_7_remediation_report_after_auto_fix_approved_escalation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "target": "specs_13_safety_governance_audit_8_governance_ui",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/13_SAFETY_GOVERNANCE_AUDIT.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "specs_13_safety_governance_audit_13_safety_governance_audit",
+      "target": "specs_13_safety_governance_audit_9_acceptance_criteria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_14_implementation_plan",
+      "target": "specs_14_implementation_plan_14_implementation_plan_phased",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "specs_14_implementation_plan_14_implementation_plan_phased",
+      "target": "specs_14_implementation_plan_engineering_risks",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "specs_14_implementation_plan_14_implementation_plan_phased",
+      "target": "specs_14_implementation_plan_p0_demo_critical_must_have_for_the_pitch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "specs_14_implementation_plan_14_implementation_plan_phased",
+      "target": "specs_14_implementation_plan_p1_credibility_governance",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "specs_14_implementation_plan_14_implementation_plan_phased",
+      "target": "specs_14_implementation_plan_p2_depth_stretch_kept_from_old_spec",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "specs_14_implementation_plan_14_implementation_plan_phased",
+      "target": "specs_14_implementation_plan_suggested_file_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/14_IMPLEMENTATION_PLAN.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "specs_14_implementation_plan_14_implementation_plan_phased",
+      "target": "specs_14_implementation_plan_team_split",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "specs_15_traceability_matrix",
+      "target": "specs_15_traceability_matrix_15_traceability_matrix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "specs_15_traceability_matrix_15_traceability_matrix",
+      "target": "specs_15_traceability_matrix_a_new_hilti_docs_merged",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "specs_15_traceability_matrix_15_traceability_matrix",
+      "target": "specs_15_traceability_matrix_b_old_cloudguard_requirements_merged",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "specs_15_traceability_matrix_15_traceability_matrix",
+      "target": "specs_15_traceability_matrix_c_decisions_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "specs_15_traceability_matrix_15_traceability_matrix",
+      "target": "specs_15_traceability_matrix_d_added_new_vs_prototype_the_build_gaps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "specs_15_traceability_matrix_15_traceability_matrix",
+      "target": "specs_15_traceability_matrix_e_consciously_not_dropped_preserved_from_old_prototype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "specs/15_TRACEABILITY_MATRIX.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "specs_15_traceability_matrix_15_traceability_matrix",
+      "target": "specs_15_traceability_matrix_f_source_folders_status",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

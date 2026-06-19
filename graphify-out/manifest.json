@@ -1,0 +1,132 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1781900189.3474522,
+    "ast_hash": "9e897f558a58ff49f35d309766f73f67",
+    "semantic_hash": ""
+  },
+  "UI_prototype/approval-queue.html": {
+    "mtime": 1781897099.9133034,
+    "ast_hash": "98ced2f4c42cb43760930955f942058c",
+    "semantic_hash": ""
+  },
+  "UI_prototype/incident-report.html": {
+    "mtime": 1781897099.9269266,
+    "ast_hash": "cf9efa2359622c0acb31176f3fbe5c4c",
+    "semantic_hash": ""
+  },
+  "UI_prototype/index.html": {
+    "mtime": 1781900175.1337914,
+    "ast_hash": "69ec521dc035ed414acfb8ef3f892f5b",
+    "semantic_hash": ""
+  },
+  "UI_prototype/server-ai.html": {
+    "mtime": 1781897099.9883492,
+    "ast_hash": "1b022c213e87ec669952f8b217b7d8f8",
+    "semantic_hash": ""
+  },
+  "UI_prototype/server-detail.html": {
+    "mtime": 1781897099.9883492,
+    "ast_hash": "dcd73b97191668a6c39db97a10843cc6",
+    "semantic_hash": ""
+  },
+  "UI_prototype/server-greenops.html": {
+    "mtime": 1781897100.0041559,
+    "ast_hash": "b3834386ef2e9844b63d04043341f0f4",
+    "semantic_hash": ""
+  },
+  "UI_prototype/server-mcp.html": {
+    "mtime": 1781897100.017557,
+    "ast_hash": "6890e2b312791fdfb104566057ed2b7d",
+    "semantic_hash": ""
+  },
+  "UI_prototype/server-security.html": {
+    "mtime": 1781897100.0247624,
+    "ast_hash": "e3bd08636bb00e630d5ee4fbf67eb51b",
+    "semantic_hash": ""
+  },
+  "UI_prototype/server-selfhealing.html": {
+    "mtime": 1781897100.0247624,
+    "ast_hash": "3520cdba1f3a03af1fedb46d1695c53a",
+    "semantic_hash": ""
+  },
+  "specs/00_INDEX.md": {
+    "mtime": 1781898397.6482413,
+    "ast_hash": "368f1902872969620ef39a0c6b3d9600",
+    "semantic_hash": ""
+  },
+  "specs/01_PROJECT_CONTEXT.md": {
+    "mtime": 1781898400.0658803,
+    "ast_hash": "436de76c5bd0fc80f2242dc7309a453b",
+    "semantic_hash": ""
+  },
+  "specs/02_ARCHITECTURE.md": {
+    "mtime": 1781899244.6724615,
+    "ast_hash": "895354861fa1b7d2b3b3ffd81811cc7a",
+    "semantic_hash": ""
+  },
+  "specs/03_DATA_MODEL.md": {
+    "mtime": 1781898463.0728238,
+    "ast_hash": "9953d73322691e7f959315459794c754",
+    "semantic_hash": ""
+  },
+  "specs/04_DETECTION_AND_INSIGHT_SDD.md": {
+    "mtime": 1781898477.667365,
+    "ast_hash": "ca672831ef341c53924d54730e938a3e",
+    "semantic_hash": ""
+  },
+  "specs/05_NEXT_BEST_ACTION_SDD.md": {
+    "mtime": 1781898498.0109742,
+    "ast_hash": "d853178db070c351981dc5ae457225c3",
+    "semantic_hash": ""
+  },
+  "specs/06_GUARDRAILED_SELF_HEALING_SDD.md": {
+    "mtime": 1781898512.9437594,
+    "ast_hash": "d0702307bdd3a87270d8c27c3b497464",
+    "semantic_hash": ""
+  },
+  "specs/07_SCORING_AND_ALERTS_SDD.md": {
+    "mtime": 1781898525.3124547,
+    "ast_hash": "28a4d3e79a2aca15424c89650db9d759",
+    "semantic_hash": ""
+  },
+  "specs/08_DOWNTIME_PREDICTION_SDD.md": {
+    "mtime": 1781898539.8668015,
+    "ast_hash": "8c6825f1e3e17a163263a7a7dc20cb48",
+    "semantic_hash": ""
+  },
+  "specs/09_ML_AND_FORECASTING_SDD.md": {
+    "mtime": 1781898551.640341,
+    "ast_hash": "b781a779a6126ed1a9fd410e3dc6f6f8",
+    "semantic_hash": ""
+  },
+  "specs/10_API_CONTRACTS.md": {
+    "mtime": 1781899244.673718,
+    "ast_hash": "661ae1ff82bc7fe2f25069688b6fede8",
+    "semantic_hash": ""
+  },
+  "specs/11_UI_UX_SPECIFICATION.md": {
+    "mtime": 1781898592.264083,
+    "ast_hash": "a08fcd64f11cb5267b1e344a867de35d",
+    "semantic_hash": ""
+  },
+  "specs/12_MOCK_DATA_AND_DEMO_SCENARIOS.md": {
+    "mtime": 1781898607.9315667,
+    "ast_hash": "e125e9361e927fdecdc0c2210d2f08a8",
+    "semantic_hash": ""
+  },
+  "specs/13_SAFETY_GOVERNANCE_AUDIT.md": {
+    "mtime": 1781898618.81213,
+    "ast_hash": "0c63e8809c0ed11a4710194bcd3239c2",
+    "semantic_hash": ""
+  },
+  "specs/14_IMPLEMENTATION_PLAN.md": {
+    "mtime": 1781899244.6724615,
+    "ast_hash": "430a3567e5f455ba6322d0f75d93b2ac",
+    "semantic_hash": ""
+  },
+  "specs/15_TRACEABILITY_MATRIX.md": {
+    "mtime": 1781898658.7505734,
+    "ast_hash": "efe28498ff6de037e9f3a426ba8e1b05",
+    "semantic_hash": ""
+  }
+}
