@@ -26,20 +26,28 @@ from backend.modules.self_healing.approval_queue import (
     approval_queue,
 )
 from backend.schemas.api_responses import success
-from backend.services import issue_service
+from backend.services import audit_service, issue_service
 
 logger = logging.getLogger("clover.api.approvals")
 
 router = APIRouter(tags=["approvals"])
 
+# Audit event label for each approval decision (keeps the human-in-the-loop
+# action visible in the immutable audit trail / compliance report).
+_DECISION_AUDIT_EVENT = {
+    "approved": "approval_granted",
+    "rejected": "approval_denied",
+    "manually_intervened": "manual_intervention",
+}
 
-def _sync_issue_status(item, new_status: str) -> None:
-    """Reflect an approval decision on the originating issue (best-effort).
+
+def _sync_issue_status(item, new_status: str, *, actor: str = "operator") -> None:
+    """Reflect an approval decision on the originating issue + audit it.
 
     Approving moves the issue to ``approved``; denying moves it to ``rejected``.
     This keeps the issue's status — which the UI's Self-Healing tab and status
-    badges read — in step with the approval queue. A failure here must never
-    fail the approve/deny request.
+    badges read — in step with the approval queue, and records an immutable audit
+    entry for the human decision. Failures here must never fail the request.
     """
     if item is None:
         return
@@ -50,6 +58,21 @@ def _sync_issue_status(item, new_status: str) -> None:
             "Failed to sync issue %s to %s after approval decision",
             item.issue_id,
             new_status,
+        )
+    try:
+        audit_service.write_audit_log(
+            event_type=_DECISION_AUDIT_EVENT.get(new_status, "approval_decision"),
+            actor=actor,
+            workload_id=item.workload_id,
+            issue_id=item.issue_id,
+            recommendation_id=item.recommendation_id,
+            previous_status="pending_approval",
+            new_status=new_status,
+            details={"execution_mode": item.execution_mode},
+        )
+    except Exception:  # noqa: BLE001 - audit recording is best-effort
+        logger.exception(
+            "Failed to audit approval decision for %s", item.recommendation_id
         )
 
 
@@ -107,6 +130,26 @@ async def deny_approval(approval_id: str) -> dict:
         raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=str(exc))
     _sync_issue_status(item, "rejected")
     return success(data=item.to_dict(), message="Recommendation denied.")
+
+
+@router.post("/api/approvals/{approval_id}/intervene", status_code=status.HTTP_200_OK)
+async def intervene_approval(approval_id: str) -> dict:
+    """Mark a queued remediation as handled by manual human intervention.
+
+    Resolves the item out of the queue and moves the originating issue to
+    ``manually_intervened`` (a human is taking over outside the automated flow).
+    """
+    if approval_queue.get(approval_id) is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Approval '{approval_id}' not found.",
+        )
+    try:
+        item = approval_queue.intervene(approval_id)
+    except InvalidTransition as exc:
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=str(exc))
+    _sync_issue_status(item, "manually_intervened")
+    return success(data=item.to_dict(), message="Marked for manual intervention.")
 
 
 @router.post("/api/approvals/{approval_id}/snooze", status_code=status.HTTP_200_OK)

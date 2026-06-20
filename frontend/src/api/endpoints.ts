@@ -361,6 +361,9 @@ export const approveRecommendation = (id: string, selectedMcpTools?: string[]) =
 export const denyApproval = (id: string) =>
   post<ApprovalItem>(`/approvals/${id}/deny`)
 
+export const interveneApproval = (id: string) =>
+  post<ApprovalItem>(`/approvals/${id}/intervene`)
+
 export const snoozeApproval = (id: string, minutes?: number) =>
   post<ApprovalItem>(
     `/approvals/${id}/snooze`,

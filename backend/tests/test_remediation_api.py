@@ -277,8 +277,16 @@ def test_report_endpoint_unknown_remediation_404(client):
     assert resp.json()["code"] == "NOT_FOUND"
 
 
-def test_auto_fix_end_to_end(client):
-    """trigger -> detect -> recommend -> evaluate -> execute -> report (auto-fix)."""
+def test_auto_fix_self_heals_end_to_end(client):
+    """trigger -> detect -> recommend -> AUTO-execute -> report (auto-fix).
+
+    ``auto_fix`` recommendations self-execute immediately via the auto-executor
+    (no manual execute needed): the issue resolves to ``auto_fixed`` with a
+    complete, persisted RemediationResult and a ``REMEDIATION_COMPLETED`` event.
+    """
+    from backend.core.database import connection
+    from backend.services import issue_service
+
     # Subscribe a probe to confirm REMEDIATION_COMPLETED is emitted.
     received: list = []
 
@@ -294,36 +302,46 @@ def test_auto_fix_end_to_end(client):
         recommendation = _wait_for_recommendation(client, workload_id)
         assert recommendation is not None
         rec_id = recommendation["recommendation_id"]
+        issue_id = recommendation["issue_id"]
 
-        # Evaluate: should choose the auto-fix path without executing.
+        # Evaluate is read-only and must still pick the auto-fix path.
         ev = client.post(f"/api/remediation/evaluate/{rec_id}")
         assert ev.status_code == 200, ev.text
         ev_data = ev.json()["data"]
         assert ev_data["execution_path"] == "auto_fix"
         assert ev_data["approval_required"] is False
-        # Evaluate must not have persisted a remediation.
-        assert recommendation_service.list_recommendations(workload_id=workload_id)
 
-        # Execute: produce + persist the RemediationResult.
-        ex = client.post(f"/api/remediation/execute/{rec_id}")
-        assert ex.status_code == 200, ex.text
-        result = ex.json()["data"]
-        _assert_complete_result(result, expected_path="auto_fix")
-        assert result["execution_status"] == "completed"
-        assert result["recommendation_id"] == rec_id
-        assert result["workload_id"] == workload_id
+        # The auto-executor self-heals: poll until the issue is auto_fixed,
+        # nudging the event loop so the fire-and-forget task runs.
+        issue = None
+        for _ in range(40):
+            issue = issue_service.get_issue(issue_id)
+            if issue is not None and issue["status"] == "auto_fixed":
+                break
+            client.get("/api/mock/status")
+        assert issue is not None and issue["status"] == "auto_fixed", (
+            "auto-fix did not self-resolve the issue "
+            f"(status={issue['status'] if issue else None})"
+        )
+
+        # REMEDIATION_COMPLETED was emitted by the auto-executor.
+        assert received, "REMEDIATION_COMPLETED event should have been emitted"
+        completed = received[0].payload
+        assert completed["recommendation_id"] == rec_id
+        assert completed["execution_path"] == "auto_fix"
+        rem_id = completed["remediation_id"]
 
         # GET report returns the persisted, complete result.
-        rem_id = result["remediation_id"]
         rep = client.get(f"/api/remediation/{rem_id}/report")
         assert rep.status_code == 200, rep.text
         stored = rep.json()["data"]
         _assert_complete_result(stored, expected_path="auto_fix")
         assert stored["remediation_id"] == rem_id
+        assert stored["execution_status"] == "completed"
+        assert stored["recommendation_id"] == rec_id
+        assert stored["workload_id"] == workload_id
 
         # The row is persisted with traceability links.
-        from backend.core.database import connection
-
         with connection() as conn:
             row = conn.execute(
                 "SELECT recommendation_id, issue_id, workload_id, execution_status "
@@ -332,25 +350,9 @@ def test_auto_fix_end_to_end(client):
             ).fetchone()
         assert row is not None
         assert row["recommendation_id"] == rec_id
-        assert row["issue_id"] == result["issue_id"]
+        assert row["issue_id"] == issue_id
         assert row["workload_id"] == workload_id
         assert row["execution_status"] == "completed"
-
-        # The originating issue advanced into the remediation lifecycle:
-        # generating the auto-fix recommendation -> recommended; executing it
-        # -> auto_fixed (drives the workload Self-Healing tab).
-        from backend.services import issue_service
-
-        issue = issue_service.get_issue(result["issue_id"])
-        assert issue is not None and issue["status"] == "auto_fixed"
-
-        # REMEDIATION_COMPLETED was emitted (drain the fire-and-forget task).
-        for _ in range(10):
-            if received:
-                break
-            client.get("/api/mock/status")
-        assert received, "REMEDIATION_COMPLETED event should have been emitted"
-        assert received[0].payload["remediation_id"] == rem_id
     finally:
         event_bus.unsubscribe(EventType.REMEDIATION_COMPLETED, _probe)
 

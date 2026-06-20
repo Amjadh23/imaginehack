@@ -289,9 +289,16 @@ class MockDataService:
 
         These tables are owned by later modules; deletion is wrapped defensively
         so a reset never fails if a table is missing or empty.
+
+        Order matters: foreign-key enforcement is ON and ``recommendations`` /
+        ``remediations`` reference ``issues`` (and ``remediations`` references
+        ``recommendations``). Children must be deleted before their parents, or
+        the parent DELETE raises a constraint error and the rows survive every
+        reset, accumulating across demo sessions. So we go child -> parent:
+        remediations, recommendations, alerts, then issues last.
         """
         cleared: dict[str, int] = {}
-        transient_tables = ("issues", "recommendations", "remediations", "alerts")
+        transient_tables = ("remediations", "recommendations", "alerts", "issues")
         try:
             with connection() as conn:
                 for table in transient_tables:
@@ -299,6 +306,13 @@ class MockDataService:
                         cur = conn.execute(f"DELETE FROM {table}")  # noqa: S608 - fixed table names
                         cleared[table] = cur.rowcount if cur.rowcount and cur.rowcount > 0 else 0
                     except Exception:  # noqa: BLE001 - table may not exist yet
+                        # A swallowed failure here previously hid the FK-order bug
+                        # that left issues uncleared; surface it for diagnosis.
+                        logger.warning(
+                            "Failed to clear transient table %s during reset",
+                            table,
+                            exc_info=True,
+                        )
                         cleared[table] = 0
         except Exception:  # noqa: BLE001 - never let reset fail on cleanup
             logger.warning("Transient state cleanup skipped", exc_info=True)

@@ -28,6 +28,7 @@ const STATUS_TONE: Record<IssueStatus, BadgeTone> = {
   remediated: 'low',
   escalated: 'high',
   rejected: 'critical',
+  manually_intervened: 'medium',
   dismissed: 'neutral',
 }
 

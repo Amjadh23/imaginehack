@@ -29,6 +29,7 @@ from backend.modules.alerts import alert_engine
 from backend.modules.alerts import delivery as alert_delivery
 from backend.modules.detection_insight import detector
 from backend.modules.next_best_action import nba_pipeline
+from backend.modules.self_healing import auto_executor
 from backend.modules.scoring import priority_scorer
 from backend.services import audit_service
 from backend.services.mock_data_service import mock_data_service
@@ -52,6 +53,9 @@ async def lifespan(app: FastAPI):
     detector.register_subscriptions()
     # Wire Module 2 NBA pipeline to react to ISSUE_DETECTED (idempotent).
     nba_pipeline.register_subscriptions()
+    # Wire Module 3 auto-fix executor to self-heal auto_fix recommendations after
+    # a short countdown (idempotent).
+    auto_executor.register_subscriptions()
     # Wire the Scoring Engine to recompute on Issue/Recommendation/Remediation
     # state changes (idempotent).
     priority_scorer.register_subscriptions()

@@ -15,6 +15,7 @@ export type ApprovalStatus =
   | 'approved'
   | 'denied'
   | 'escalated'
+  | 'manually_intervened'
 
 /** A single remediation awaiting (or having received) a human decision. */
 export interface ApprovalItem {
@@ -30,6 +31,8 @@ export interface ApprovalItem {
   mcp_tools: string[]
   environment: string | null
   ai_rationale: string
+  /** Required execution mode: 'user_approval_required' | 'human_escalation_required'. */
+  execution_mode: string
   status: ApprovalStatus
   created_at: string
   /** ISO timestamp when the item auto-escalates, or null if no timer. */

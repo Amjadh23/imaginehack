@@ -31,6 +31,10 @@ const ISSUE_CATEGORIES = [
   'cost_energy_carbon',
 ] as const
 
+// Issues with a final human decision (approved, denied, or handled by manual
+// intervention) are no longer "active" and are hidden from the Issues list.
+const RESOLVED_STATUSES = new Set(['approved', 'rejected', 'manually_intervened'])
+
 // Higher rank = more urgent, so the table can sort severity semantically.
 const SEVERITY_RANK: Record<Severity, number> = {
   critical: 4,
@@ -92,6 +96,12 @@ export default function Issues() {
 
   const { data: issues, loading, error } = useIssues(filters)
   const { data: workloads } = useWorkloads()
+
+  // Issues that have received a final human decision drop out of the active list.
+  const visibleIssues = useMemo(
+    () => (issues ?? []).filter((i) => !RESOLVED_STATUSES.has(i.status)),
+    [issues],
+  )
 
   // Map workload_id → workload so issue rows can show the workload's name and
   // its source environment (issues only carry workload_id).
@@ -214,7 +224,7 @@ export default function Issues() {
       ) : (
         <DataTable
           columns={columns}
-          rows={issues ?? []}
+          rows={visibleIssues}
           getRowId={(i) => i.issue_id}
           onRowClick={(i) => navigate(`/issues/${i.issue_id}`)}
           emptyMessage="No issues match the current filters."

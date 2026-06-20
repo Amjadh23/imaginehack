@@ -1,8 +1,7 @@
-import { Check, Clock, ServerCog, X } from 'lucide-react'
+import { Check, Clock, HandHelping, ServerCog, X } from 'lucide-react'
 import type { ApprovalItem as ApprovalItemModel } from '../../types'
 import { formatRelativeTime } from '../../lib/formatters'
 import Badge, { severityTone } from '../ui/Badge'
-import EscalationTimer from './EscalationTimer'
 import ExecutionPath from './ExecutionPath'
 
 interface ApprovalItemProps {
@@ -13,10 +12,10 @@ interface ApprovalItemProps {
   busy?: boolean
   /** Open the approve confirmation (with optional MCP tool selection). */
   onApprove: () => void
+  /** Open the manual-intervention confirmation. */
+  onIntervene: () => void
   /** Open the deny confirmation. */
   onDeny: () => void
-  /** Snooze the escalation timer (default window). */
-  onSnooze: () => void
 }
 
 /** Humanize a snake_case enum into a readable label. */
@@ -32,20 +31,19 @@ const ACTION_BTN =
 
 /**
  * A single approval-queue card: workload, recommended action, AI rationale,
- * risk/environment/MCP-tool context, time-since-request, a live escalation
- * countdown, and Approve / Deny / Snooze actions (design.md §Approval Queue).
+ * risk/environment/MCP-tool context, time-since-request, and
+ * Approve / Manual Intervention / Deny actions (design.md §Approval Queue).
  */
 export default function ApprovalItem({
   item,
   workloadName,
   busy = false,
   onApprove,
+  onIntervene,
   onDeny,
-  onSnooze,
 }: ApprovalItemProps) {
   const isCritical = item.severity === 'critical'
   const canDecide = item.status === 'pending' || item.status === 'snoozed'
-  const canSnooze = canDecide || item.status === 'escalated'
   const path = item.status === 'escalated' ? 'escalation' : 'approval'
 
   return (
@@ -75,6 +73,16 @@ export default function ApprovalItem({
           <Badge tone={severityTone(item.severity)} uppercase>
             {item.severity}
           </Badge>
+          {/* Distinguish a human escalation from a routine approval. */}
+          {item.execution_mode === 'human_escalation_required' ? (
+            <Badge tone="critical" uppercase>
+              Escalation
+            </Badge>
+          ) : (
+            <Badge tone="neutral" uppercase>
+              Approval
+            </Badge>
+          )}
           <ExecutionPath path={path} />
         </div>
       </div>
@@ -131,11 +139,6 @@ export default function ApprovalItem({
             <Clock className="h-3.5 w-3.5" aria-hidden />
             {formatRelativeTime(item.created_at)}
           </span>
-          <EscalationTimer
-            seconds={item.seconds_until_escalation}
-            severity={item.severity}
-            escalated={item.status === 'escalated'}
-          />
         </div>
 
         <div className="flex items-center gap-2">
@@ -150,21 +153,21 @@ export default function ApprovalItem({
           </button>
           <button
             type="button"
+            onClick={onIntervene}
+            disabled={busy || !canDecide}
+            className={`${ACTION_BTN} bg-warning-500/15 text-warning-700 hover:bg-warning-500/25`}
+          >
+            <HandHelping className="h-4 w-4" aria-hidden />
+            Manual Intervention
+          </button>
+          <button
+            type="button"
             onClick={onDeny}
             disabled={busy || !canDecide}
             className={`${ACTION_BTN} bg-critical-500/15 text-critical-700 hover:bg-critical-500/25`}
           >
             <X className="h-4 w-4" aria-hidden />
             Deny
-          </button>
-          <button
-            type="button"
-            onClick={onSnooze}
-            disabled={busy || !canSnooze}
-            className={`${ACTION_BTN} bg-navy-900 text-navy-200 hover:bg-navy-700`}
-          >
-            <Clock className="h-4 w-4" aria-hidden />
-            Snooze
           </button>
         </div>
       </div>

@@ -314,8 +314,12 @@ def detect(
 
     estimated_impact = _estimate_impact(issue_category, severity)
 
-    # 6. Consolidate or create.
-    existing = issue_service.find_open_issue(telemetry.workload_id, db_path=db_path)
+    # 6. Consolidate or create. Use an unbounded lookup so a re-triggered
+    #    scenario updates the single active issue for the workload rather than
+    #    spawning a duplicate, regardless of how long ago it was first detected.
+    existing = issue_service.find_open_issue(
+        telemetry.workload_id, within_seconds=None, db_path=db_path
+    )
     if existing is not None:
         return _consolidate(
             existing=existing,

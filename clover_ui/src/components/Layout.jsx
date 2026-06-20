@@ -35,10 +35,6 @@ function Sidebar() {
           </NavLink>
         ))}
       </nav>
-      <div className="px-5 py-4 border-t border-white/10 text-[11px] text-clover-300/70">
-        HILTI Track 2 · MVP
-        <div className="mt-1 text-clover-400/60">Secure &amp; Energy-Aware Cloud Ops</div>
-      </div>
     </aside>
   )
 }

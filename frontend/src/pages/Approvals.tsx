@@ -5,7 +5,7 @@ import { useWorkloads } from '../hooks/useWorkloads'
 import {
   approveRecommendation,
   denyApproval,
-  snoozeApproval,
+  interveneApproval,
 } from '../api/endpoints'
 import { ApiError } from '../api/client'
 import type { ApprovalItem as ApprovalItemModel, Severity } from '../types'
@@ -21,11 +21,9 @@ const SEVERITY_RANK: Record<Severity, number> = {
   low: 1,
 }
 
-/** Default snooze window (minutes) — matches the backend default. */
-const SNOOZE_MINUTES = 30
-
 type PendingAction =
   | { kind: 'approve'; item: ApprovalItemModel }
+  | { kind: 'intervene'; item: ApprovalItemModel }
   | { kind: 'deny'; item: ApprovalItemModel }
 
 function errorMessage(err: unknown): string {
@@ -69,6 +67,11 @@ export default function Approvals() {
     setAction({ kind: 'approve', item })
   }
 
+  const openIntervene = (item: ApprovalItemModel) => {
+    setActionError(null)
+    setAction({ kind: 'intervene', item })
+  }
+
   const openDeny = (item: ApprovalItemModel) => {
     setActionError(null)
     setAction({ kind: 'deny', item })
@@ -85,19 +88,6 @@ export default function Approvals() {
     )
   }
 
-  const handleSnooze = async (item: ApprovalItemModel) => {
-    setBusyId(item.approval_id)
-    setActionError(null)
-    try {
-      await snoozeApproval(item.approval_id, SNOOZE_MINUTES)
-      await refetch()
-    } catch (err) {
-      setActionError(errorMessage(err))
-    } finally {
-      setBusyId(null)
-    }
-  }
-
   const confirmAction = async () => {
     if (!action) return
     const { kind, item } = action
@@ -106,6 +96,8 @@ export default function Approvals() {
     try {
       if (kind === 'approve') {
         await approveRecommendation(item.approval_id, selectedTools)
+      } else if (kind === 'intervene') {
+        await interveneApproval(item.approval_id)
       } else {
         await denyApproval(item.approval_id)
       }
@@ -126,8 +118,8 @@ export default function Approvals() {
           <p className="eyebrow">Clover · Guardrailed Self-Healing</p>
           <h1 className="mt-1 text-2xl font-semibold text-navy-50">Approval Queue</h1>
           <p className="mt-1 text-sm text-navy-300">
-            Remediations awaiting review, sorted by severity. High-risk items
-            auto-escalate when their countdown expires.
+            Remediations awaiting review, sorted by severity. Each item waits for
+            an explicit decision: approve, take manual intervention, or deny.
           </p>
         </div>
       </header>
@@ -159,8 +151,8 @@ export default function Approvals() {
               workloadName={workloadName(item)}
               busy={busyId === item.approval_id}
               onApprove={() => openApprove(item)}
+              onIntervene={() => openIntervene(item)}
               onDeny={() => openDeny(item)}
-              onSnooze={() => handleSnooze(item)}
             />
           ))}
         </div>
@@ -173,7 +165,9 @@ export default function Approvals() {
         title={
           action?.kind === 'approve'
             ? 'Approve remediation'
-            : 'Deny remediation'
+            : action?.kind === 'intervene'
+              ? 'Mark for manual intervention'
+              : 'Deny remediation'
         }
         footer={
           <>
@@ -192,14 +186,18 @@ export default function Approvals() {
                 'rounded-lg px-4 py-1.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50',
                 action?.kind === 'approve'
                   ? 'bg-healthy-500 text-navy-950 hover:bg-healthy-400'
-                  : 'bg-critical-500 text-white hover:bg-critical-400',
+                  : action?.kind === 'intervene'
+                    ? 'bg-warning-500 text-navy-950 hover:bg-warning-400'
+                    : 'bg-critical-500 text-white hover:bg-critical-400',
               ].join(' ')}
             >
               {busyId !== null
                 ? 'Working…'
                 : action?.kind === 'approve'
                   ? 'Approve & execute'
-                  : 'Confirm deny'}
+                  : action?.kind === 'intervene'
+                    ? 'Confirm manual intervention'
+                    : 'Confirm deny'}
             </button>
           </>
         }
@@ -248,6 +246,12 @@ export default function Approvals() {
                   This remediation has no MCP tools to select.
                 </p>
               )
+            ) : action.kind === 'intervene' ? (
+              <p className="text-sm text-navy-300">
+                Marking for manual intervention removes this item from the queue;
+                a human is taking over outside the automated flow. The
+                recommendation will not be auto-executed.
+              </p>
             ) : (
               <p className="text-sm text-navy-300">
                 Denying closes this remediation. It will not be executed.

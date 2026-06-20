@@ -227,7 +227,7 @@ export default function Reports() {
     <div className="flex flex-col gap-6">
       <header>
         <p className="eyebrow">Clover · Self-Healing</p>
-        <h1 className="mt-2 text-2xl font-semibold text-navy-50">Reports</h1>
+        <h1 className="mt-2 text-2xl font-semibold text-navy-50">Self-Heal Reports</h1>
         <p className="mt-1 text-sm text-navy-300">
           Completed remediation actions and projected savings across your workloads.
         </p>

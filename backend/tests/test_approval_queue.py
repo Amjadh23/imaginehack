@@ -125,40 +125,32 @@ def test_same_severity_breaks_ties_oldest_first(queue):
 # --------------------------------------------------------------------------- #
 # Escalation countdown (Req 9.2)
 # --------------------------------------------------------------------------- #
-def test_high_risk_item_gets_15_minute_countdown(queue):
-    item = queue.add(_make_recommendation(recommendation_id="rec-hi", risk_level="high"), now=T0)
-    assert item.escalation_deadline == T0 + timedelta(minutes=15)
-    assert item.seconds_until_escalation(now=T0) == 15 * 60
-
-
-def test_medium_risk_item_has_no_countdown(queue):
-    item = queue.add(_make_recommendation(recommendation_id="rec-md", risk_level="medium"), now=T0)
-    assert item.escalation_deadline is None
-    assert item.seconds_until_escalation(now=T0) is None
+def test_no_escalation_countdown_for_any_risk(queue):
+    """The auto-escalation countdown has been removed: no deadline is set."""
+    for risk in ("high", "critical", "medium", "low"):
+        item = queue.add(
+            _make_recommendation(recommendation_id=f"rec-{risk}", risk_level=risk),
+            now=T0,
+        )
+        assert item.escalation_deadline is None
+        assert item.seconds_until_escalation(now=T0) is None
 
 
 # --------------------------------------------------------------------------- #
-# Auto-escalation on timeout (Req 9.3) - inject a future "now"
+# No auto-escalation: items wait for an explicit human decision
 # --------------------------------------------------------------------------- #
-def test_auto_escalates_on_timeout(queue):
+def test_no_auto_escalation_on_timeout(queue):
     queue.add(_make_recommendation(recommendation_id="rec-hi", risk_level="high"), now=T0)
 
-    # Just before the deadline: still pending.
-    before = queue.list_items(now=T0 + timedelta(minutes=14, seconds=59))
-    assert before[0].status == "pending"
+    # No deadline ever fires, even far in the future.
+    escalated = queue.process_escalations(now=T0 + timedelta(hours=24))
+    assert escalated == []
+    listed = queue.list_items(now=T0 + timedelta(hours=24))
+    assert listed[0].status == "pending"
 
-    # At/after the deadline: auto-escalated.
-    after = queue.process_escalations(now=T0 + timedelta(minutes=15))
-    assert len(after) == 1
-    assert after[0].status == "escalated"
-    assert queue.get("rec-hi").status == "escalated"
-
-
-def test_escalated_item_cannot_be_approved(queue):
-    queue.add(_make_recommendation(recommendation_id="rec-hi", risk_level="high"), now=T0)
-    queue.process_escalations(now=T0 + timedelta(minutes=16))
-    with pytest.raises(InvalidTransition):
-        queue.approve("rec-hi", now=T0 + timedelta(minutes=16))
+    # The item is still actionable (it never auto-escalated out of pending).
+    item = queue.approve("rec-hi", now=T0 + timedelta(hours=24))
+    assert item.status == "approved"
 
 
 # --------------------------------------------------------------------------- #
@@ -181,18 +173,20 @@ def test_deny_transition(queue):
     assert queue.list_items(now=T0 + timedelta(minutes=1)) == []
 
 
-def test_snooze_pushes_escalation_deadline(queue):
-    queue.add(_make_recommendation(recommendation_id="rec-3", risk_level="high"), now=T0)
-    item = queue.snooze("rec-3", now=T0 + timedelta(minutes=5))
-    assert item.status == "snoozed"
-    # Default snooze is 30 minutes from "now".
-    assert item.escalation_deadline == T0 + timedelta(minutes=35)
-    # Snoozed item is still live and does NOT escalate at the original 15-min mark.
-    listed = queue.list_items(now=T0 + timedelta(minutes=16))
-    assert listed[0].status == "snoozed"
-    # ...but escalates once the new deadline passes.
-    queue.process_escalations(now=T0 + timedelta(minutes=36))
-    assert queue.get("rec-3").status == "escalated"
+def test_manual_intervention_transition(queue):
+    queue.add(_make_recommendation(recommendation_id="rec-mi", risk_level="high"), now=T0)
+    item = queue.intervene("rec-mi", now=T0 + timedelta(minutes=1))
+    assert item.status == "manually_intervened"
+    assert item.resolved_at == T0 + timedelta(minutes=1)
+    # Manually-intervened items leave the live queue.
+    assert queue.list_items(now=T0 + timedelta(minutes=1)) == []
+
+
+def test_intervene_on_resolved_item_is_invalid(queue):
+    queue.add(_make_recommendation(recommendation_id="rec-mi2", risk_level="high"), now=T0)
+    queue.approve("rec-mi2", now=T0)
+    with pytest.raises(InvalidTransition):
+        queue.intervene("rec-mi2", now=T0)
 
 
 def test_double_approve_is_invalid(queue):
@@ -246,7 +240,16 @@ def test_api_list_is_severity_sorted(client, seeded_queue):
     approvals = body["data"]["approvals"]
     assert body["data"]["count"] == 2
     assert [a["severity"] for a in approvals] == ["critical", "medium"]
-    assert approvals[0]["seconds_until_escalation"] is not None  # high risk -> timer
+    # The auto-escalation countdown was removed: no item carries a timer.
+    assert all(a["seconds_until_escalation"] is None for a in approvals)
+
+
+def test_api_manual_intervention(client, seeded_queue):
+    resp = client.post("/api/approvals/api-crit/intervene")
+    assert resp.status_code == 200, resp.text
+    assert resp.json()["data"]["status"] == "manually_intervened"
+    # The intervened item has left the live queue.
+    assert client.get("/api/approvals").json()["data"]["count"] == 1
 
 
 def test_api_approve_and_deny(client, seeded_queue):

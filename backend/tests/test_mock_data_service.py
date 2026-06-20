@@ -14,6 +14,7 @@ from __future__ import annotations
 import asyncio
 import os
 import tempfile
+from datetime import datetime, timezone
 
 import pytest
 
@@ -26,7 +27,7 @@ from backend.core.config import get_settings  # noqa: E402
 
 get_settings.cache_clear()
 
-from backend.core.database import init_db  # noqa: E402
+from backend.core.database import connection, init_db  # noqa: E402
 from backend.core.event_bus import Event, EventType, event_bus  # noqa: E402
 from backend.services import telemetry_service, workload_service  # noqa: E402
 from backend.services.mock_data_service import MockDataService  # noqa: E402
@@ -124,6 +125,57 @@ def test_reset_restores_healthy_baseline_and_clears_state(service):
     # After reset the freshest snapshot for the cost-spike target is healthy.
     history = telemetry_service.get_telemetry_history("wl-costly-vm-001", limit=1)
     assert history[0]["cost_30d_forecast"] == pytest.approx(324.0)  # baseline, not 4464
+
+
+def test_reset_clears_issues_with_dependent_children(service):
+    """Regression: reset must delete issues even when child recommendations /
+    remediations still reference them.
+
+    ``issues`` is the parent of ``recommendations`` and ``remediations`` (FK on
+    ``issue_id``) and FK enforcement is ON. If reset deletes ``issues`` before
+    its children, the DELETE raises a constraint error that the per-table guard
+    silently swallows, leaving stale issues behind forever (they accumulate
+    across every demo session). Children must be deleted first.
+    """
+    service.seed_workloads()
+    now = datetime.now(timezone.utc).isoformat()
+    wid = "wl-bim-processor-001"
+    with connection() as conn:
+        conn.execute(
+            "INSERT INTO issues (issue_id, workload_id, issue_type, issue_category, "
+            "severity, status, detected_at, data, created_at, updated_at) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (
+                "iss-reset-regress",
+                wid,
+                "carbon_heavy_workload",
+                "carbon",
+                "medium",
+                "recommended",
+                now,
+                "{}",
+                now,
+                now,
+            ),
+        )
+        conn.execute(
+            "INSERT INTO recommendations (recommendation_id, issue_id, workload_id, "
+            "created_at, data) VALUES (?, ?, ?, ?, ?)",
+            ("rec-reset-regress", "iss-reset-regress", wid, now, "{}"),
+        )
+
+    # Precondition: the parent issue and its child recommendation exist.
+    with connection() as conn:
+        assert conn.execute("SELECT COUNT(*) FROM issues").fetchone()[0] >= 1
+        assert conn.execute("SELECT COUNT(*) FROM recommendations").fetchone()[0] >= 1
+
+    result = asyncio.run(service.reset())
+
+    # The issues deletion must actually have happened (not silently failed).
+    assert result["cleared"]["issues"] >= 1
+    with connection() as conn:
+        assert conn.execute("SELECT COUNT(*) FROM issues").fetchone()[0] == 0
+        assert conn.execute("SELECT COUNT(*) FROM recommendations").fetchone()[0] == 0
 
 
 # --- Continuous streaming ----------------------------------------------------
