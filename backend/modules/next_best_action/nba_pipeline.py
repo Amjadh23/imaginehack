@@ -50,6 +50,13 @@ from backend.services import (
 
 logger = logging.getLogger("clover.nba.pipeline")
 
+# Execution modes that require a human and therefore belong in the approval
+# queue (the issue is moved to ``pending_approval`` for both). ``auto_fix`` is
+# handled by the auto-executor instead.
+_HUMAN_HANDLED_MODES = frozenset(
+    {"user_approval_required", "human_escalation_required"}
+)
+
 
 # --------------------------------------------------------------------------- #
 # Context resolution
@@ -174,16 +181,21 @@ def _queue_for_approval(
     workload: Workload | None = None,
     db_path: str | None = None,
 ) -> None:
-    """Add a recommendation that needs sign-off to the global approval queue.
+    """Add a recommendation that needs human handling to the approval queue.
 
-    Recommendations whose ``required_execution_mode`` is
-    ``user_approval_required`` must be approved by a human before the
-    remediation ``execute`` endpoint will run them. Enqueueing here is what makes
-    that gate real: without an item in the queue there is nothing for an operator
-    to approve and nothing for the executor to check against. Best-effort — a
-    queueing failure must never block recommendation generation.
+    Two execution modes require a human and therefore belong in the queue:
+
+    * ``user_approval_required`` — an operator signs off before execution.
+    * ``human_escalation_required`` — escalated to a human expert; per product
+      decision these are routed into the same approvals queue (tagged via the
+      item's ``execution_mode``) rather than a separate state, so they stay
+      visible and actionable. Without this, escalations were generated but never
+      surfaced anywhere.
+
+    ``auto_fix`` recommendations are never queued — they self-resolve. Best-effort:
+    a queueing failure must never block recommendation generation.
     """
-    if recommendation.required_execution_mode != "user_approval_required":
+    if recommendation.required_execution_mode not in _HUMAN_HANDLED_MODES:
         return
     # Don't re-add (and thereby reset to "pending") an item that is already in
     # the queue — that would clobber an in-flight approve/deny/snooze decision.
@@ -217,7 +229,7 @@ def _advance_issue_status(
     """
     new_status = (
         "pending_approval"
-        if recommendation.required_execution_mode == "user_approval_required"
+        if recommendation.required_execution_mode in _HUMAN_HANDLED_MODES
         else "recommended"
     )
     try:

@@ -80,6 +80,20 @@ function stringifyValue(value: unknown): string {
   }
 }
 
+/** True for nested objects/arrays that read better as a formatted JSON block. */
+function isComplexValue(value: unknown): boolean {
+  return typeof value === 'object' && value !== null
+}
+
+/** A pretty-printed (indented) JSON block for nested values. */
+function JsonBlock({ value }: { value: unknown }) {
+  return (
+    <pre className="mt-1 overflow-x-auto rounded bg-navy-950/60 p-2 text-xs leading-relaxed text-navy-200">
+      {JSON.stringify(value, null, 2)}
+    </pre>
+  )
+}
+
 /** A titled section card. */
 function Section({
   title,
@@ -103,22 +117,42 @@ function Section({
   )
 }
 
-/** Render a flat key/value grid for a generic record. */
-function KeyValueGrid({ record }: { record: Record<string, unknown> }) {
+/**
+ * Render a flat key/value grid for a generic record. When ``formatJson`` is set,
+ * nested object/array values render as a pretty-printed JSON block (and span the
+ * full grid width) instead of a cramped one-line string.
+ */
+function KeyValueGrid({
+  record,
+  formatJson = false,
+}: {
+  record: Record<string, unknown>
+  formatJson?: boolean
+}) {
   const entries = Object.entries(record)
   if (entries.length === 0) {
     return <p className="text-sm text-navy-400">No details recorded.</p>
   }
   return (
     <dl className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
-      {entries.map(([key, value]) => (
-        <div key={key} className="flex flex-col">
-          <dt className="text-xs font-medium uppercase tracking-wide text-navy-400">
-            {humanize(key)}
-          </dt>
-          <dd className="text-sm text-navy-100">{stringifyValue(value)}</dd>
-        </div>
-      ))}
+      {entries.map(([key, value]) => {
+        const complex = formatJson && isComplexValue(value)
+        return (
+          <div
+            key={key}
+            className={`flex flex-col${complex ? ' sm:col-span-2' : ''}`}
+          >
+            <dt className="text-xs font-medium uppercase tracking-wide text-navy-400">
+              {humanize(key)}
+            </dt>
+            {complex ? (
+              <JsonBlock value={value} />
+            ) : (
+              <dd className="text-sm text-navy-100">{stringifyValue(value)}</dd>
+            )}
+          </div>
+        )
+      })}
     </dl>
   )
 }
@@ -273,7 +307,7 @@ export default function RemediationReport({ report, workloadName }: RemediationR
 
       {/* Before / After */}
       <Section title="Before / After Impact" subtitle="Projected impact of the remediation.">
-        <KeyValueGrid record={report.impact_result} />
+        <KeyValueGrid record={report.impact_result} formatJson />
       </Section>
 
       {/* Execution Timeline */}
@@ -298,7 +332,7 @@ export default function RemediationReport({ report, workloadName }: RemediationR
                       <span className="text-xs text-navy-400">{formatDateTime(ts)}</span>
                     )}
                   </div>
-                  <KeyValueGrid record={event} />
+                  <KeyValueGrid record={event} formatJson />
                 </li>
               )
             })}

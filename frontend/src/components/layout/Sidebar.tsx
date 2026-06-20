@@ -26,7 +26,7 @@ const NAV: NavItem[] = [
   { to: '/workloads', label: 'Workloads', icon: Boxes },
   { to: '/issues', label: 'Issues', icon: TriangleAlert },
   { to: '/approvals', label: 'Approvals', icon: ShieldCheck },
-  { to: '/reports', label: 'Reports', icon: FileText },
+  { to: '/reports', label: 'Self-Heal Reports', icon: FileText },
   { to: '/audit', label: 'Audit Logs', icon: ScrollText },
   { to: '/mock', label: 'Mock Controller', icon: SlidersHorizontal },
 ]
@@ -57,11 +57,6 @@ export default function Sidebar() {
           </NavLink>
         ))}
       </nav>
-
-      <div className="px-5 py-4 border-t border-navy-700 text-[11px] text-navy-300">
-        HILTI Track 2 · MVP
-        <div className="mt-1 text-navy-400">Secure &amp; Energy-Aware Cloud Ops</div>
-      </div>
     </aside>
   )
 }

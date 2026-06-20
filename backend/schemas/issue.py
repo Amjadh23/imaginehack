@@ -26,6 +26,7 @@ IssueStatus = Literal[
     "remediated",
     "escalated",
     "rejected",
+    "manually_intervened",
     "dismissed",
 ]
 

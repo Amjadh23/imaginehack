@@ -23,6 +23,7 @@ export type IssueStatus =
   | 'remediated'
   | 'escalated'
   | 'rejected'
+  | 'manually_intervened'
   | 'dismissed'
 
 /** Output of the anomaly detection model (or its fallback). */

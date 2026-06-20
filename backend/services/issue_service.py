@@ -218,18 +218,23 @@ def update_status(
 def find_open_issue(
     workload_id: str,
     *,
-    within_seconds: int = CONSOLIDATION_WINDOW_SECONDS,
+    within_seconds: int | None = CONSOLIDATION_WINDOW_SECONDS,
     now: datetime | None = None,
     db_path: str | None = None,
 ) -> dict | None:
-    """Find the most recent OPEN issue for a workload within the time window.
+    """Find the most recent OPEN issue for a workload, for consolidation.
 
-    Used for 5-minute consolidation (Requirement 3.3): when an open issue for
-    the same workload exists within ``within_seconds``, detection updates it
-    instead of creating a duplicate. Returns the issue dict or ``None``.
+    When an open issue for the same workload already exists, detection updates it
+    instead of creating a duplicate (Requirement 3.3). ``within_seconds`` bounds
+    how old that issue may be; pass ``None`` for an **unbounded** lookup so any
+    open issue for the workload is reused (keeps a single active issue per
+    workload no matter how long ago it was first detected). Returns the issue
+    dict or ``None``.
     """
     reference = now or datetime.now(timezone.utc)
-    cutoff = reference - timedelta(seconds=within_seconds)
+    cutoff = (
+        None if within_seconds is None else reference - timedelta(seconds=within_seconds)
+    )
 
     placeholders = ",".join("?" for _ in OPEN_STATUSES)
     sql = (
@@ -245,6 +250,6 @@ def find_open_issue(
             detected_at = _parse_dt(row["detected_at"])
         except (ValueError, TypeError):
             continue
-        if detected_at >= cutoff:
+        if cutoff is None or detected_at >= cutoff:
             return _row_to_issue_dict(row)
     return None

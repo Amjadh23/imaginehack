@@ -41,7 +41,9 @@ from backend.schemas.recommendation import Recommendation
 logger = logging.getLogger("clover.self_healing.approval_queue")
 
 Severity = Literal["low", "medium", "high", "critical"]
-ApprovalStatus = Literal["pending", "snoozed", "approved", "denied", "escalated"]
+ApprovalStatus = Literal[
+    "pending", "snoozed", "approved", "denied", "escalated", "manually_intervened"
+]
 
 # Severity ordering (Critical highest). Used to sort the queue and to derive a
 # fallback severity from a recommendation's risk_level.
@@ -91,6 +93,10 @@ class ApprovalItem:
     mcp_tools: list[str] = field(default_factory=list)
     environment: str | None = None
     ai_rationale: str = ""
+    # The recommendation's required execution mode. Both ``user_approval_required``
+    # and ``human_escalation_required`` live in this queue; the tag lets the UI
+    # label an item as an approval vs an escalation without a separate state.
+    execution_mode: str = "user_approval_required"
     status: ApprovalStatus = "pending"
     created_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
     escalation_deadline: datetime | None = None
@@ -119,6 +125,7 @@ class ApprovalItem:
             "mcp_tools": list(self.mcp_tools),
             "environment": self.environment,
             "ai_rationale": self.ai_rationale,
+            "execution_mode": self.execution_mode,
             "status": self.status,
             "created_at": self.created_at.isoformat(),
             "escalation_deadline": (
@@ -189,9 +196,9 @@ class ApprovalQueue:
         resolved_severity = severity or self._resolve_severity(recommendation)
         reference = _now(now)
 
+        # No auto-escalation/auto-approve countdown: items wait for an explicit
+        # human decision (Approve / Manual Intervention / Deny).
         deadline: datetime | None = None
-        if recommendation.risk_level in _ESCALATION_RISK_LEVELS:
-            deadline = reference + timedelta(minutes=self.escalation_timeout_minutes)
 
         item = ApprovalItem(
             approval_id=recommendation.recommendation_id,
@@ -205,6 +212,7 @@ class ApprovalQueue:
             mcp_tools=list(recommendation.mcp_tools),
             environment=environment,
             ai_rationale=recommendation.llm_recommendation_explanation,
+            execution_mode=recommendation.required_execution_mode,
             status="pending",
             created_at=reference,
             escalation_deadline=deadline,
@@ -247,6 +255,16 @@ class ApprovalQueue:
     def deny(self, approval_id: str, *, now: datetime | None = None) -> ApprovalItem | None:
         """Deny a pending/snoozed item. Returns ``None`` if not found."""
         return self._decide(approval_id, "denied", now=now)
+
+    def intervene(
+        self, approval_id: str, *, now: datetime | None = None
+    ) -> ApprovalItem | None:
+        """Mark a pending/snoozed item as handled by manual human intervention.
+
+        Resolves the item out of the queue (a human is taking over outside the
+        automated flow). Returns ``None`` if not found.
+        """
+        return self._decide(approval_id, "manually_intervened", now=now)
 
     def _decide(
         self,
@@ -309,26 +327,13 @@ class ApprovalQueue:
     # Escalation
     # ------------------------------------------------------------------ #
     def _process_escalations(self, now: datetime) -> list[ApprovalItem]:
-        """Auto-escalate any live item whose escalation deadline has passed.
+        """No-op: auto-escalation by countdown has been removed.
 
-        Caller must hold ``self._lock``.
+        Items now stay live until a human explicitly approves, denies, or takes
+        manual intervention. Retained as a no-op so existing call sites and the
+        public hook keep working. Caller must hold ``self._lock``.
         """
-        escalated: list[ApprovalItem] = []
-        for item in self._items.values():
-            if (
-                item.status in ("pending", "snoozed")
-                and item.escalation_deadline is not None
-                and now >= item.escalation_deadline
-            ):
-                item.status = "escalated"
-                item.resolved_at = now
-                escalated.append(item)
-                logger.info(
-                    "Approval %s auto-escalated (deadline %s reached)",
-                    item.approval_id,
-                    item.escalation_deadline.isoformat(),
-                )
-        return escalated
+        return []
 
     def process_escalations(self, *, now: datetime | None = None) -> list[ApprovalItem]:
         """Public hook to run escalation timers; returns newly escalated items."""
