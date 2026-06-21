@@ -66,10 +66,10 @@ Clover unifies all of those signals and turns them into safe, explainable action
 | Name | Role | Programme |
 |---|---|---|
 | Muhammad Izzul Islam bin Faisal | Project Lead & Explainable AI Specialist | Bachelor of Computer Science (Data Science) with Honours |
-| Muhammad Nur Amjadh Bin Asabdeen | Software Engineering Lead | Software Engineering with Honours student |
-| MUHAMMAD EZAIRIEL AZIEQ BIN SHAHROMNIZAL | ML & AI Specialist | Software Engineering with Honours student |
-| KAMARUL FAHMI BIN KAMARUL NIZAM | Software Engineering Specialist | Software Engineering with Honours student |
-| MUHAMMAD ISAAC FURQAN BIN HALI @ HAILLIN | Software Engineering Specialist | — |
+| Muhammad Nur Amjadh Bin Asabdeen | Software Engineering Lead | Software Engineering with Honours |
+| MUHAMMAD EZAIRIEL AZIEQ BIN SHAHROMNIZAL | ML & AI Specialist |  Bachelor of Computer Science (Data Science) with Honours |
+| KAMARUL FAHMI BIN KAMARUL NIZAM | Software Engineering Specialist | Software Engineering with Honours |
+| MUHAMMAD ISAAC FURQAN BIN HALI @ HAILLIN | Software Engineering Specialist | Software Engineering with Honours |
 
 ---
 
